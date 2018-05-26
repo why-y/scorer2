@@ -4,25 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java" line="21" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a6f1faa-3790-4618-bb71-b92fc4d02538" name="Default" comment="Init status">
-      <change afterPath="$PROJECT_DIR$/.gradle/4.7/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcsWorkingDirs/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/out/production/classes/ch/sample/scorer2/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/out/production/classes/ch/sample/scorer2/Game.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/out/test/classes/ch/sample/scorer2/GameTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    <list default="true" id="7a6f1faa-3790-4618-bb71-b92fc4d02538" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -65,8 +48,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="445">
+              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
               <folding>
                 <element signature="e#272#273#0" expanded="true" />
                 <element signature="e#304#305#0" expanded="true" />
@@ -885,8 +868,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527272517795</updated>
-      <workItem from="1527272519082" duration="10403000" />
+      <workItem from="1527272519082" duration="10643000" />
     </task>
+    <task id="LOCAL-00001" summary="Init status">
+      <created>1527365527362</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527365527362</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -922,7 +913,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10403000" />
+    <option name="totallyTimeSpent" value="10643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -1006,8 +997,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="445">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
           <folding>
             <element signature="e#272#273#0" expanded="true" />
             <element signature="e#304#305#0" expanded="true" />

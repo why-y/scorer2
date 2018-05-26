@@ -65,4 +65,5 @@ public class Game {
         }
         return isDeuce() ? "Deuce" : String.format("%d:%d", scoreA, scoreB);
     }
+
 }
