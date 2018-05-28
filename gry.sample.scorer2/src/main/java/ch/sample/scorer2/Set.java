@@ -3,7 +3,6 @@ package ch.sample.scorer2;
 public class Set {
 
     private final int scoreA;
-
     private final int scoreB;
 
     private Set(int scoreA, int scoreB) {
@@ -20,12 +19,12 @@ public class Set {
     }
 
     public Set scoreA() {
-        checkIfNotYetTerminated();
+        mustNotBeTerminated();
         return new Set(scoreA+1, scoreB);
     }
 
     public Set scoreB() {
-        checkIfNotYetTerminated();
+        mustNotBeTerminated();
         return new Set(scoreA, scoreB+1);
     }
 
@@ -37,7 +36,7 @@ public class Set {
         return Math.abs(scoreA-scoreB) >= 2;
     }
 
-    private void checkIfNotYetTerminated() {
+    private void mustNotBeTerminated() {
         if(isOver()) throw new AlreadyTerminatedException("Must not score on terminated Set! Final score is " + print());
     }
 
