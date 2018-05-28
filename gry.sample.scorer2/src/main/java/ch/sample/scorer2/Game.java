@@ -15,20 +15,29 @@ public class Game {
     }
 
     public Game scoreA() {
-        if(isGameOver()) {
-            throw new RuntimeException("must not score on a terminated game!");
-        }
-        return new Game(nextScore(scoreA), scoreB);
+        assertGameNotOver();
+        return new Game(getNextScore(scoreA), scoreB);
     }
 
     public Game scoreB() {
-        if(isGameOver()) {
-            throw new RuntimeException("must not score on a terminated game!");
-        }
-        return new Game(scoreA, nextScore(scoreB));
+        assertGameNotOver();
+        return new Game(scoreA, getNextScore(scoreB));
     }
 
-    private int nextScore(final int currentScore) {
+    public String print() {
+        if(isDeuce()) {
+            return "Deuce";
+        }
+        if(isAdvantage()) {
+            return String.format("Advantage %s", getLeader());
+        }
+        if(isGameOver()) {
+            return String.format("Game %s", getLeader());
+        }
+        return isDeuce() ? "Deuce" : String.format("%d:%d", scoreA, scoreB);
+    }
+
+    private int getNextScore(final int currentScore) {
         return currentScore < 30 ? currentScore + 15 : currentScore + 10;
     }
 
@@ -49,21 +58,14 @@ public class Game {
     }
 
     private char getLeader() {
+        if(scoreA==scoreB) return '-';
         return scoreA > scoreB ? 'A' : 'B';
     }
 
-    @Override
-    public String toString() {
-        if(isDeuce()) {
-            return "Deuce";
-        }
-        if(isAdvantage()) {
-            return String.format("Advantage %s", getLeader());
-        }
+    private void assertGameNotOver() {
         if(isGameOver()) {
-            return String.format("Game %s", getLeader());
+            throw new AlreadyTerminatedException("must not score on a terminated game!");
         }
-        return isDeuce() ? "Deuce" : String.format("%d:%d", scoreA, scoreB);
     }
 
 }
