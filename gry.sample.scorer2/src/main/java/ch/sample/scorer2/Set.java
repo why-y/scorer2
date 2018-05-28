@@ -2,12 +2,21 @@ package ch.sample.scorer2;
 
 public class Set {
 
+    public enum Mode {PLAY_OFF, TIE_BREAK};
+
     private final int scoreA;
     private final int scoreB;
+    private final Mode mode;
+
 
     private Set(int scoreA, int scoreB) {
+        this(scoreA, scoreB, Mode.PLAY_OFF);
+    }
+
+    private Set(int scoreA, int scoreB, Mode mode) {
         this.scoreA = scoreA;
         this.scoreB = scoreB;
+        this.mode = mode;
     }
 
     public static Set start() {
