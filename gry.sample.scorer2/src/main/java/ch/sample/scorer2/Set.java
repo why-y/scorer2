@@ -1,17 +1,19 @@
 package ch.sample.scorer2;
 
+import static ch.sample.scorer2.Set.*;
+
 public class Set {
 
-    public enum Mode {PLAY_OFF, TIE_BREAK};
+    public enum Mode {
+        ADVANTAGE, TIEBREAK;
+        public Set start() {
+            return new Set(0,0, this);
+        }
+    };
 
     private final int scoreA;
     private final int scoreB;
     private final Mode mode;
-
-
-    private Set(int scoreA, int scoreB) {
-        this(scoreA, scoreB, Mode.PLAY_OFF);
-    }
 
     private Set(int scoreA, int scoreB, Mode mode) {
         this.scoreA = scoreA;
@@ -20,7 +22,15 @@ public class Set {
     }
 
     public static Set start() {
-        return new Set(0,0);
+        return withoutTiebreak().start();
+    }
+
+    public static Mode withTiebreak() {
+        return Mode.TIEBREAK;
+    }
+
+    public static Mode withoutTiebreak() {
+        return Mode.ADVANTAGE;
     }
 
     public String print() {
@@ -29,20 +39,36 @@ public class Set {
 
     public Set scoreA() {
         mustNotBeTerminated();
-        return new Set(scoreA+1, scoreB);
+        return new Set(scoreA+1, scoreB, mode);
     }
 
     public Set scoreB() {
         mustNotBeTerminated();
-        return new Set(scoreA, scoreB+1);
+        return new Set(scoreA, scoreB+1, mode);
     }
 
     public boolean isOver() {
-        return oneIsTwoGamesAhead() & scoreA >= 6;
+        return aHasWon() || bHasWon();
     }
 
-    private boolean oneIsTwoGamesAhead() {
-        return Math.abs(scoreA-scoreB) >= 2;
+    private boolean aHasWon() {
+        return hasWonByTwoGames(scoreA, scoreB) || hasWonInTiebreak(scoreA, scoreB);
+    }
+
+    private boolean bHasWon() {
+        return hasWonByTwoGames(scoreB, scoreA) || hasWonInTiebreak(scoreB, scoreA);
+    }
+
+    private boolean hasWonInTiebreak(int potentialWinnerScore, int opponentScore) {
+        return isaTiebreakSet() && potentialWinnerScore == 6 && opponentScore == 5;
+    }
+
+    private boolean hasWonByTwoGames(int potentialWinnerScore, int opponentScore) {
+        return potentialWinnerScore >= 6 && potentialWinnerScore-opponentScore >=2;
+    }
+
+    private boolean isaTiebreakSet() {
+        return mode == Mode.TIEBREAK;
     }
 
     private void mustNotBeTerminated() {

@@ -1,5 +1,8 @@
 package ch.sample.scorer2;
 
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.Is.is;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,37 +13,42 @@ public class TiebreakTest {
 
     @Test
     public void startTiebreakScoreIs0_0() {
-        assertEquals("initial score must be 0:0", "0:0", Tiebreak.start().print());
+        assertThat(Tiebreak.start().print(), equalTo("0:0"));
     }
 
     @Test
     public void given0_0scoreAgets1_0() {
-        assertEquals("must be 1:0", "1:0", Tiebreak.start().scoreA().print());
+        assertThat(Tiebreak.start().scoreA().print(), equalTo("1:0"));
     }
 
     @Test
     public void given0_0scoreBgets0_1() {
-        assertEquals("must be 0:1", "0:1", Tiebreak.start().scoreB().print());
+        assertThat(Tiebreak.start().scoreB().print(), equalTo("0:1"));
     }
 
     @Test
     public void given1_0scoreAgets2_0() {
-        assertEquals("must be 2:0", "2:0", Tiebreak.start().scoreA().scoreA().print());
+        assertThat(Tiebreak.start().scoreA().scoreA().print(), equalTo("2:0"));
     }
 
     @Test
     public void given6_5tiebreakIsNotOver() {
-        assertFalse("on 6:5 the tiebreak must not be over", SCORE_5_5.scoreA().isOver());
+        assertThat("on 6:5 the tiebreak must not be over", SCORE_5_5.scoreA().isOver(), is(false));
+    }
+
+    @Test
+    public void given4_0tiebreakIsNotOver() {
+        assertThat("on 4:0 the tiebreak must not be over", Tiebreak.start().scoreA().scoreA().scoreA().scoreA().isOver(), is(false));
     }
 
     @Test
     public void given7_5tiebreakIstOver() {
-        assertTrue("on 7:5 the tiebreack must over", SCORE_5_5.scoreA().scoreA().isOver());
+        assertThat("on 7:5 the tiebreack must over", SCORE_5_5.scoreA().scoreA().isOver(), is(true));
     }
 
     @Test
     public void given7_7scoreAgets8_7() {
-        assertEquals("must be 8:7", "8:7", SCORE_5_5.scoreA().scoreB().scoreA().scoreB().scoreA().print());
+        assertThat(SCORE_5_5.scoreA().scoreB().scoreA().scoreB().scoreA().print(), equalTo("8:7"));
     }
 
 }

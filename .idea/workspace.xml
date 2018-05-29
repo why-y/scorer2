@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a6f1faa-3790-4618-bb71-b92fc4d02538" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Tiebreak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/TiebreakTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/SetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/SetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/TiebreakTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/TiebreakTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -38,30 +39,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Set.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Set.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="301">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="28" />
               <folding>
-                <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#143#144#0" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
                 <element signature="e#297#298#0" expanded="true" />
                 <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
                 <element signature="e#374#375#0" expanded="true" />
                 <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#634#635#0" expanded="true" />
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
-                <element signature="e#786#787#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#1082#1083#0" expanded="true" />
+                <element signature="e#1121#1122#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1320#1321#0" expanded="true" />
+                <element signature="e#1697#1698#0" expanded="true" />
+                <element signature="e#1739#1740#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,18 +71,14 @@
       <file leaf-file-name="SetTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/SetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="-252">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#136#137#0" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-                <element signature="e#332#333#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
                 <element signature="e#889#890#0" expanded="true" />
                 <element signature="e#963#964#0" expanded="true" />
                 <element signature="e#1026#1027#0" expanded="true" />
@@ -90,45 +87,6 @@
                 <element signature="e#1768#1769#0" expanded="true" />
                 <element signature="e#1882#1883#0" expanded="true" />
                 <element signature="e#1934#1935#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tiebreak.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Tiebreak.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-              <folding>
-                <element signature="e#271#272#0" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#456#457#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TiebreakTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/TiebreakTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#605#606#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,6 +107,7 @@
       <find>getLeader</find>
       <find>Runt</find>
       <find>toString</find>
+      <find>new</find>
     </findStrings>
     <replaceStrings>
       <replace>print</replace>
@@ -607,10 +566,10 @@
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/AlreadyTerminatedException.java" />
-        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/SetTest.java" />
-        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Tiebreak.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/TiebreakTest.java" />
+        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/SetTest.java" />
+        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java" />
       </list>
     </option>
   </component>
@@ -619,6 +578,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
@@ -757,12 +722,81 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TiebreakTest">
+  <component name="RunManager" selected="JUnit.SetTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="SetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gry.sample.scorer2_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.sample.scorer2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
+      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.SetTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SetTest.given6_5inTiebreakModeSetIsOver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gry.sample.scorer2_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.sample.scorer2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
+      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.SetTest" />
+      <option name="METHOD_NAME" value="given6_5inTiebreakModeSetIsOver" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SetTest.initialScoreIs0_0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gry.sample.scorer2_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.sample.scorer2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
+      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.SetTest" />
+      <option name="METHOD_NAME" value="initialScoreIs0_0" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="TiebreakTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gry.sample.scorer2_test" />
@@ -787,29 +821,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="TiebreakTest.given0_0scoreBgets0_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gry.sample.scorer2_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch.sample.scorer2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
-      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.TiebreakTest" />
-      <option name="METHOD_NAME" value="given0_0scoreBgets0_1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="TiebreakTest.given6_5tiebreakIsNotOver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gry.sample.scorer2_test" />
       <extension name="coverage">
@@ -823,52 +834,6 @@
       <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
       <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.TiebreakTest" />
       <option name="METHOD_NAME" value="given6_5tiebreakIsNotOver" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="TiebreakTest.given7_5tiebreakIstOver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gry.sample.scorer2_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch.sample.scorer2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
-      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.TiebreakTest" />
-      <option name="METHOD_NAME" value="given7_5tiebreakIstOver" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="TiebreakTest.given7_7scoreAgets8_7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gry.sample.scorer2_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch.sample.scorer2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
-      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.TiebreakTest" />
-      <option name="METHOD_NAME" value="given7_7scoreAgets8_7" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -918,19 +883,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TiebreakTest" />
-      <item itemvalue="JUnit.TiebreakTest.given0_0scoreBgets0_1" />
       <item itemvalue="JUnit.TiebreakTest.given6_5tiebreakIsNotOver" />
-      <item itemvalue="JUnit.TiebreakTest.given7_5tiebreakIstOver" />
-      <item itemvalue="JUnit.TiebreakTest.given7_7scoreAgets8_7" />
+      <item itemvalue="JUnit.TiebreakTest" />
+      <item itemvalue="JUnit.SetTest" />
+      <item itemvalue="JUnit.SetTest.initialScoreIs0_0" />
+      <item itemvalue="JUnit.SetTest.given6_5inTiebreakModeSetIsOver" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SetTest" />
+        <item itemvalue="JUnit.SetTest.given6_5inTiebreakModeSetIsOver" />
+        <item itemvalue="JUnit.SetTest.initialScoreIs0_0" />
         <item itemvalue="JUnit.TiebreakTest" />
-        <item itemvalue="JUnit.TiebreakTest.given7_7scoreAgets8_7" />
-        <item itemvalue="JUnit.TiebreakTest.given7_5tiebreakIstOver" />
         <item itemvalue="JUnit.TiebreakTest.given6_5tiebreakIsNotOver" />
-        <item itemvalue="JUnit.TiebreakTest.given0_0scoreBgets0_1" />
       </list>
     </recent_temporary>
   </component>
@@ -945,7 +910,7 @@
       <option name="presentableId" value="Default" />
       <updated>1527272517795</updated>
       <workItem from="1527272519082" duration="13193000" />
-      <workItem from="1527532600022" duration="8387000" />
+      <workItem from="1527532600022" duration="14753000" />
     </task>
     <task id="LOCAL-00001" summary="Init status">
       <created>1527365527362</created>
@@ -982,43 +947,50 @@
       <option name="project" value="LOCAL" />
       <updated>1527539076265</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Tiebreak">
+      <created>1527607919358</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1527607919358</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TiebreakTest_given6_5tiebreakIsNotOver - 2018.05.29 at 07h 45m 39s.xml">
-      <configuration name="TiebreakTest.given6_5tiebreakIsNotOver" configurationId="JUnit" />
+    <history-entry file="SetTest_given6_5inTiebreakModeSetIsOver - 2018.05.29 at 20h 53m 18s.xml">
+      <configuration name="SetTest.given6_5inTiebreakModeSetIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest_given7_5tiebreakIstOver - 2018.05.29 at 07h 46m 19s.xml">
-      <configuration name="TiebreakTest.given7_5tiebreakIstOver" configurationId="JUnit" />
+    <history-entry file="SetTest_given6_5inTiebreakModeSetIsOver - 2018.05.29 at 20h 53m 46s.xml">
+      <configuration name="SetTest.given6_5inTiebreakModeSetIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest_given7_5tiebreakIstOver - 2018.05.29 at 07h 47m 08s.xml">
-      <configuration name="TiebreakTest.given7_5tiebreakIstOver" configurationId="JUnit" />
+    <history-entry file="SetTest_given6_5inTiebreakModeSetIsOver - 2018.05.29 at 20h 54m 10s.xml">
+      <configuration name="SetTest.given6_5inTiebreakModeSetIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest - 2018.05.29 at 07h 52m 42s.xml">
-      <configuration name="TiebreakTest" configurationId="JUnit" />
+    <history-entry file="SetTest_given6_5inTiebreakModeSetIsOver - 2018.05.29 at 20h 54m 31s.xml">
+      <configuration name="SetTest.given6_5inTiebreakModeSetIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest - 2018.05.29 at 07h 54m 16s.xml">
-      <configuration name="TiebreakTest" configurationId="JUnit" />
+    <history-entry file="SetTest_given6_5inTiebreakModeSetIsOver - 2018.05.29 at 20h 59m 36s.xml">
+      <configuration name="SetTest.given6_5inTiebreakModeSetIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest_given7_5tiebreakIstOver - 2018.05.29 at 07h 54m 31s.xml">
-      <configuration name="TiebreakTest.given7_5tiebreakIstOver" configurationId="JUnit" />
+    <history-entry file="SetTest_given6_5inTiebreakModeSetIsOver - 2018.05.29 at 21h 00m 18s.xml">
+      <configuration name="SetTest.given6_5inTiebreakModeSetIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest_given7_7scoreAgets8_7 - 2018.05.29 at 07h 56m 38s.xml">
-      <configuration name="TiebreakTest.given7_7scoreAgets8_7" configurationId="JUnit" />
+    <history-entry file="SetTest_given6_5inTiebreakModeSetIsOver - 2018.05.29 at 21h 08m 43s.xml">
+      <configuration name="SetTest.given6_5inTiebreakModeSetIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest_given7_7scoreAgets8_7 - 2018.05.29 at 07h 57m 51s.xml">
-      <configuration name="TiebreakTest.given7_7scoreAgets8_7" configurationId="JUnit" />
+    <history-entry file="SetTest - 2018.05.29 at 21h 21m 42s.xml">
+      <configuration name="SetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest_given7_7scoreAgets8_7 - 2018.05.29 at 07h 58m 42s.xml">
-      <configuration name="TiebreakTest.given7_7scoreAgets8_7" configurationId="JUnit" />
+    <history-entry file="SetTest - 2018.05.29 at 21h 30m 18s.xml">
+      <configuration name="SetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TiebreakTest_given7_7scoreAgets8_7 - 2018.05.29 at 07h 59m 47s.xml">
-      <configuration name="TiebreakTest.given7_7scoreAgets8_7" configurationId="JUnit" />
+    <history-entry file="SetTest - 2018.05.29 at 21h 40m 35s.xml">
+      <configuration name="SetTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21580000" />
+    <option name="totallyTimeSpent" value="27946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -1031,7 +1003,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32959402" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32929516" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32929516" />
@@ -1046,7 +1018,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32929516" />
@@ -1066,7 +1038,8 @@
     <MESSAGE value="Init status" />
     <MESSAGE value="Add Set class" />
     <MESSAGE value="Add Mode: PlayOff/Tiebreak" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Mode: PlayOff/Tiebreak" />
+    <MESSAGE value="Add Tiebreak" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Tiebreak" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1077,7 +1050,7 @@
           <properties />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1117,13 +1090,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/App.java" />
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/RuntimeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -1174,54 +1140,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/SetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#136#137#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
-            <element signature="e#1716#1717#0" expanded="true" />
-            <element signature="e#1768#1769#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
-            <element signature="e#1934#1935#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Tiebreak.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="319">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding>
             <element signature="e#271#272#0" expanded="true" />
             <element signature="e#310#311#0" expanded="true" />
@@ -1241,14 +1163,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/TiebreakTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="72">
+          <caret line="4" lean-forward="true" selection-start-line="2" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/SetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1768#1769#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="28" />
+          <folding>
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1697#1698#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
           </folding>
         </state>
       </provider>
