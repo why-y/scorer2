@@ -37,6 +37,10 @@ public class Game {
         return isDeuce() ? "Deuce" : String.format("%d:%d", scoreA, scoreB);
     }
 
+    boolean isGameOver() {
+        return isTwoRalliesApart() && (scoreA>40 || scoreB>40);
+    }
+
     private int getNextScore(final int currentScore) {
         return currentScore < 30 ? currentScore + 15 : currentScore + 10;
     }
@@ -47,10 +51,6 @@ public class Game {
 
     private boolean isAdvantage() {
         return scoreA != scoreB && scoreA >= 40 && scoreB >= 40;
-    }
-
-    private boolean isGameOver() {
-        return isTwoRalliesApart() && (scoreA>40 || scoreB>40);
     }
 
     private boolean isTwoRalliesApart() {
