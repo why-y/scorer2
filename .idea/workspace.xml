@@ -4,13 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java" line="21" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a6f1faa-3790-4618-bb71-b92fc4d02538" name="Default" comment="Support two modes for Set">
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/PlayerTest.java" afterDir="false" />
+    <list default="true" id="7a6f1faa-3790-4618-bb71-b92fc4d02538" name="Default" comment="Introduce Match">
+      <change afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchScoreTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/out/production/classes/ch/sample/scorer2/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/out/production/classes/ch/sample/scorer2/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/MatchScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -35,31 +36,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Match.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java">
+      <file leaf-file-name="MatchScore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/MatchScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="30" column="97" selection-start-line="30" selection-start-column="97" selection-end-line="30" selection-end-column="97" />
+            <state relative-caret-position="184">
+              <caret line="59" column="111" selection-start-line="59" selection-start-column="111" selection-end-line="59" selection-end-column="111" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#544#545#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1200#1201#0" expanded="true" />
-                <element signature="e#1234#1235#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
+                <element signature="e#1388#1389#0" expanded="true" />
+                <element signature="e#1415#1416#0" expanded="true" />
+                <element signature="e#1476#1477#0" expanded="true" />
+                <element signature="e#1564#1565#0" expanded="true" />
+                <element signature="e#1423#1424#0" expanded="true" />
+                <element signature="e#1451#1452#0" expanded="true" />
+                <element signature="e#2187#2188#0" expanded="true" />
+                <element signature="e#2224#2225#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchTest.java">
+      <file leaf-file-name="MatchScoreTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchScoreTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="319">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2202#2203#0" expanded="true" />
+                <element signature="e#2248#2249#0" expanded="true" />
+                <element signature="e#2375#2376#0" expanded="true" />
+                <element signature="e#2446#2447#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,6 +89,7 @@
       <find>toString</find>
       <find>new</find>
       <find>currentGame</find>
+      <find>printTerminatedSets</find>
     </findStrings>
     <replaceStrings>
       <replace>print</replace>
@@ -542,12 +550,14 @@
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Tiebreak.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/TiebreakTest.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/SetTest.java" />
-        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/PlayerTest.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Player.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java" />
-        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchTest.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" />
+        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchTest.java" />
+        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java" />
+        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/MatchScore.java" />
+        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchScoreTest.java" />
       </list>
     </option>
   </component>
@@ -700,14 +710,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MatchTest.given_5_0__40_0_aScoresGets_6_0_0_0__0_0">
+  <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="MatchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchScoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gry.sample.scorer2_test" />
       <extension name="coverage">
         <pattern>
@@ -718,7 +728,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
-      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.MatchTest" />
+      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.MatchScoreTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -730,7 +740,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchScoreTest.given_6_0_5_0__40_0_aScoresGets_aWon_6_0_6_0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gry.sample.scorer2_test" />
       <extension name="coverage">
         <pattern>
@@ -741,8 +751,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
-      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.MatchTest" />
-      <option name="METHOD_NAME" value="given_0_0__40_0_aScoresGets_1_0__0_0" />
+      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.MatchScoreTest" />
+      <option name="METHOD_NAME" value="given_6_0_5_0__40_0_aScoresGets_aWon_6_0_6_0" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -753,7 +763,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="MatchTest.given_5_0__40_0_aScoresGets_6_0_0_0__0_0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchScoreTest.given_6_0_5_0__40_0_matchIsNotOver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gry.sample.scorer2_test" />
       <extension name="coverage">
         <pattern>
@@ -764,8 +774,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
-      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.MatchTest" />
-      <option name="METHOD_NAME" value="given_5_0__40_0_aScoresGets_6_0_0_0__0_0" />
+      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.MatchScoreTest" />
+      <option name="METHOD_NAME" value="given_6_0_5_0__40_0_matchIsNotOver" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -776,7 +786,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchScoreTest.given_6_0_5_0__40_0_matchIsOver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gry.sample.scorer2_test" />
       <extension name="coverage">
         <pattern>
@@ -787,9 +797,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
-      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.PlayerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.MatchScoreTest" />
+      <option name="METHOD_NAME" value="given_6_0_5_0__40_0_matchIsOver" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -799,7 +809,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="PlayerTest.testPrintPlayersName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchScoreTest.given_MatchIsOverScoreAthrowsExc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gry.sample.scorer2_test" />
       <extension name="coverage">
         <pattern>
@@ -810,8 +820,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ch.sample.scorer2" />
-      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.PlayerTest" />
-      <option name="METHOD_NAME" value="testPrintPlayersName" />
+      <option name="MAIN_CLASS_NAME" value="ch.sample.scorer2.MatchScoreTest" />
+      <option name="METHOD_NAME" value="given_MatchIsOverScoreAthrowsExc" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -861,19 +871,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.MatchTest" />
-      <item itemvalue="JUnit.PlayerTest.testPrintPlayersName" />
-      <item itemvalue="JUnit.PlayerTest" />
-      <item itemvalue="JUnit.MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" />
-      <item itemvalue="JUnit.MatchTest.given_5_0__40_0_aScoresGets_6_0_0_0__0_0" />
+      <item itemvalue="JUnit.MatchScoreTest" />
+      <item itemvalue="JUnit.MatchScoreTest.given_6_0_5_0__40_0_aScoresGets_aWon_6_0_6_0" />
+      <item itemvalue="JUnit.MatchScoreTest.given_MatchIsOverScoreAthrowsExc" />
+      <item itemvalue="JUnit.MatchScoreTest.given_6_0_5_0__40_0_matchIsNotOver" />
+      <item itemvalue="JUnit.MatchScoreTest.given_6_0_5_0__40_0_matchIsOver" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MatchTest.given_5_0__40_0_aScoresGets_6_0_0_0__0_0" />
-        <item itemvalue="JUnit.MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" />
-        <item itemvalue="JUnit.MatchTest" />
-        <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="JUnit.PlayerTest.testPrintPlayersName" />
+        <item itemvalue="JUnit.MatchScoreTest" />
+        <item itemvalue="JUnit.MatchScoreTest.given_6_0_5_0__40_0_aScoresGets_aWon_6_0_6_0" />
+        <item itemvalue="JUnit.MatchScoreTest.given_6_0_5_0__40_0_matchIsOver" />
+        <item itemvalue="JUnit.MatchScoreTest.given_6_0_5_0__40_0_matchIsNotOver" />
+        <item itemvalue="JUnit.MatchScoreTest.given_MatchIsOverScoreAthrowsExc" />
       </list>
     </recent_temporary>
   </component>
@@ -888,7 +898,7 @@
       <option name="presentableId" value="Default" />
       <updated>1527272517795</updated>
       <workItem from="1527272519082" duration="13193000" />
-      <workItem from="1527532600022" duration="25370000" />
+      <workItem from="1527532600022" duration="33343000" />
     </task>
     <task id="LOCAL-00001" summary="Init status">
       <created>1527365527362</created>
@@ -939,43 +949,50 @@
       <option name="project" value="LOCAL" />
       <updated>1527623348594</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Introduce Match">
+      <created>1528140259703</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1528140259703</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MatchTest_given_0_0__40_0_aScoresGets_1_0__0_0 - 2018.06.04 at 21h 08m 03s.xml">
-      <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest_given_6_0_5_0__40_0_matchIsOver - 2018.06.07 at 17h 26m 06s.xml">
+      <configuration name="MatchScoreTest.given_6_0_5_0__40_0_matchIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_0_0__40_0_aScoresGets_1_0__0_0 - 2018.06.04 at 21h 08m 09s.xml">
-      <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest_given_6_0_5_0__40_0_matchIsOver - 2018.06.11 at 11h 58m 19s.xml">
+      <configuration name="MatchScoreTest.given_6_0_5_0__40_0_matchIsOver" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_0_0__40_0_aScoresGets_1_0__0_0 - 2018.06.04 at 21h 08m 39s.xml">
-      <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest - 2018.06.11 at 11h 58m 27s.xml">
+      <configuration name="MatchScoreTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_0_0__40_0_aScoresGets_1_0__0_0 - 2018.06.04 at 21h 08m 45s.xml">
-      <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest_given_6_0_5_0__40_0_aScoresGets_aWon_6_0_6_0 - 2018.06.11 at 11h 59m 39s.xml">
+      <configuration name="MatchScoreTest.given_6_0_5_0__40_0_aScoresGets_aWon_6_0_6_0" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_0_0__40_0_aScoresGets_1_0__0_0 - 2018.06.04 at 21h 08m 59s.xml">
-      <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest - 2018.06.11 at 12h 05m 36s.xml">
+      <configuration name="MatchScoreTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_0_0__40_0_aScoresGets_1_0__0_0 - 2018.06.04 at 21h 12m 55s.xml">
-      <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest - 2018.06.11 at 12h 06m 32s.xml">
+      <configuration name="MatchScoreTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_0_0__40_0_aScoresGets_1_0__0_0 - 2018.06.04 at 21h 15m 21s.xml">
-      <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest - 2018.06.11 at 12h 07m 51s.xml">
+      <configuration name="MatchScoreTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_0_0__40_0_aScoresGets_1_0__0_0 - 2018.06.04 at 21h 18m 30s.xml">
-      <configuration name="MatchTest.given_0_0__40_0_aScoresGets_1_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest - 2018.06.11 at 12h 08m 48s.xml">
+      <configuration name="MatchScoreTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_5_0__40_0_aScoresGets_6_0_0_0__0_0 - 2018.06.04 at 21h 18m 51s.xml">
-      <configuration name="MatchTest.given_5_0__40_0_aScoresGets_6_0_0_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest - 2018.06.11 at 12h 12m 12s.xml">
+      <configuration name="MatchScoreTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MatchTest_given_5_0__40_0_aScoresGets_6_0_0_0__0_0 - 2018.06.04 at 21h 22m 45s.xml">
-      <configuration name="MatchTest.given_5_0__40_0_aScoresGets_6_0_0_0__0_0" configurationId="JUnit" />
+    <history-entry file="MatchScoreTest - 2018.06.11 at 12h 12m 37s.xml">
+      <configuration name="MatchScoreTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38563000" />
+    <option name="totallyTimeSpent" value="46536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -1025,7 +1042,8 @@
     <MESSAGE value="Add Mode: PlayOff/Tiebreak" />
     <MESSAGE value="Add Tiebreak" />
     <MESSAGE value="Support two modes for Set" />
-    <option name="LAST_COMMIT_MESSAGE" value="Support two modes for Set" />
+    <MESSAGE value="Introduce Match" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce Match" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,7 +1054,7 @@
           <properties />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1069,9 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,16 +1098,6 @@
           <folding>
             <element signature="e#1595#1596#0" expanded="true" />
             <element signature="e#1625#1626#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="50" column="68" lean-forward="true" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1140,33 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" lean-forward="true" selection-start-line="2" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="28" />
-          <folding>
-            <element signature="e#143#144#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1697#1698#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1219,28 +1197,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchTest.java">
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="277">
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java">
+    <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="30" column="97" selection-start-line="30" selection-start-column="97" selection-end-line="30" selection-end-column="97" />
+        <state relative-caret-position="193">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/MatchScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="59" column="111" selection-start-line="59" selection-start-column="111" selection-end-line="59" selection-end-column="111" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#1234#1235#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1564#1565#0" expanded="true" />
+            <element signature="e#1423#1424#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#2187#2188#0" expanded="true" />
+            <element signature="e#2224#2225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/MatchScoreTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+            <element signature="e#2375#2376#0" expanded="true" />
+            <element signature="e#2446#2447#0" expanded="true" />
           </folding>
         </state>
       </provider>

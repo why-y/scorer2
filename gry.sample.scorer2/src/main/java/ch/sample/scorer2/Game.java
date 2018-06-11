@@ -31,13 +31,13 @@ public class Game {
         if(isAdvantage()) {
             return String.format("Advantage %s", getLeader());
         }
-        if(isGameOver()) {
+        if(isOver()) {
             return String.format("Game %s", getLeader());
         }
         return isDeuce() ? "Deuce" : String.format("%d:%d", scoreA, scoreB);
     }
 
-    boolean isGameOver() {
+    boolean isOver() {
         return isTwoRalliesApart() && (scoreA>40 || scoreB>40);
     }
 
@@ -63,7 +63,7 @@ public class Game {
     }
 
     private void assertGameNotOver() {
-        if(isGameOver()) {
+        if(isOver()) {
             throw new AlreadyTerminatedException("must not score on a terminated game!");
         }
     }

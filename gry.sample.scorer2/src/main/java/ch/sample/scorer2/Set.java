@@ -51,11 +51,11 @@ public class Set {
         return aHasWon() || bHasWon();
     }
 
-    private boolean aHasWon() {
+    public boolean aHasWon() {
         return hasWonByTwoGames(scoreA, scoreB) || hasWonInTiebreak(scoreA, scoreB);
     }
 
-    private boolean bHasWon() {
+    public boolean bHasWon() {
         return hasWonByTwoGames(scoreB, scoreA) || hasWonInTiebreak(scoreB, scoreA);
     }
 
