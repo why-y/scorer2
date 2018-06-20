@@ -1,6 +1,6 @@
 package ch.sample.scorer2;
 
-public class Game {
+public class Game implements ScoreUnit {
 
     private final int scoreA;
     private final int scoreB;
@@ -14,16 +14,19 @@ public class Game {
         return new Game(0,0);
     }
 
+    @Override
     public Game scoreA() {
         assertGameNotOver();
         return new Game(getNextScore(scoreA), scoreB);
     }
 
+    @Override
     public Game scoreB() {
         assertGameNotOver();
         return new Game(scoreA, getNextScore(scoreB));
     }
 
+    @Override
     public String print() {
         if(isDeuce()) {
             return "Deuce";
@@ -34,10 +37,11 @@ public class Game {
         if(isOver()) {
             return String.format("Game %s", getLeader());
         }
-        return isDeuce() ? "Deuce" : String.format("%d:%d", scoreA, scoreB);
+        return isDeuce() ? "Deuce" : String.format(" %d:%d", scoreA, scoreB);
     }
 
-    boolean isOver() {
+    @Override
+    public boolean isOver() {
         return isTwoRalliesApart() && (scoreA>40 || scoreB>40);
     }
 

@@ -22,7 +22,7 @@ public class Set {
     }
 
     public static Set start() {
-        return withoutTiebreak().start();
+        return withTiebreak().start();
     }
 
     public static Mode withTiebreak() {
@@ -60,11 +60,15 @@ public class Set {
     }
 
     private boolean hasWonInTiebreak(int potentialWinnerScore, int opponentScore) {
-        return isaTiebreakSet() && potentialWinnerScore == 6 && opponentScore == 5;
+        return isaTiebreakSet() && potentialWinnerScore == 7 && opponentScore == 6;
     }
 
     private boolean hasWonByTwoGames(int potentialWinnerScore, int opponentScore) {
         return potentialWinnerScore >= 6 && potentialWinnerScore-opponentScore >=2;
+    }
+
+    public boolean requiresTiebreak() {
+        return isaTiebreakSet() && scoreA == 6 && scoreB == 6;
     }
 
     private boolean isaTiebreakSet() {
