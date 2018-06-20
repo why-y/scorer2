@@ -14,13 +14,8 @@ public class Tiebreak implements ScoreUnit {
     }
 
     @Override
-    public Tiebreak scoreA() {
-        return new Tiebreak(scoreA+1, scoreB);
-    }
-
-    @Override
-    public Tiebreak scoreB() {
-        return new Tiebreak(scoreA, scoreB+1);
+    public Tiebreak score(Player player) {
+        return player == Player.A ? new Tiebreak(scoreA+1, scoreB) : new Tiebreak(scoreA, scoreB+1);
     }
 
     @Override

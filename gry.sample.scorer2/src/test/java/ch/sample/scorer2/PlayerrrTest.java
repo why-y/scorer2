@@ -7,16 +7,16 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class PlayerTest {
+public class PlayerrrTest {
 
     @Test
     public void testInitPlayer() {
-        assertThat(Player.named("Bob Smith"), instanceOf(Player.class));
+        assertThat(Playerrr.named("Bob Smith"), instanceOf(Playerrr.class));
     }
 
     @Test
     public void testPrintPlayersName() {
-        assertThat(Player.named("Eric Carter").printName(), equalTo("Eric Carter"));
+        assertThat(Playerrr.named("Eric Carter").printName(), equalTo("Eric Carter"));
     }
 
 }

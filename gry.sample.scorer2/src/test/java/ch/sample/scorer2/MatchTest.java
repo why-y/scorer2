@@ -1,9 +1,8 @@
 package ch.sample.scorer2;
-import ch.sample.scorer2.MatchConfiguration.BestOf;
-import ch.sample.scorer2.MatchConfiguration.Tiebreaks;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.Is.is;
+import static ch.sample.scorer2.Player.*;
 import static ch.sample.scorer2.MatchConfiguration.BestOf.*;
 import static ch.sample.scorer2.MatchConfiguration.Tiebreaks.*;
 import static org.junit.Assert.*;
@@ -12,12 +11,10 @@ import org.junit.Test;
 
 
 public class MatchTest {
-
-    private enum Player {A, B};
-
+    
     private Match scoreNRalliesFor(Match match, int numOfRallies, Player player) {
         for (int i = 0; i < numOfRallies; i++) {
-            match = player == Player.A ? match.scoreA() : match.scoreB();
+            match = player == Player.A ? match.score(A) : match.score(B);
         }
         return match;
     }
@@ -36,26 +33,26 @@ public class MatchTest {
 
     @Test
     public void givenNewMatch_aScores_gets_0_0__15_0() {
-        assertThat(Match.startDefaultMatch().scoreA().printFullScore(), equalTo("[0:0] 15:0"));
+        assertThat(Match.startDefaultMatch().score(A).printFullScore(), equalTo("[0:0] 15:0"));
     }
 
     @Test
     public void given_0_0__40_0_aScoresGets_1_0__0_0() {
-        assertThat(Match.startDefaultMatch().scoreA().scoreA().scoreA().scoreA().printFullScore(), equalTo("[1:0] 0:0"));
+        assertThat(Match.startDefaultMatch().score(A).score(A).score(A).score(A).printFullScore(), equalTo("[1:0] 0:0"));
     }
 
     @Test
     public void given_5_0__40_0_aScoresGets_6_0_0_0__0_0() {
         Match testee = scoreNGamesFor(Match.startDefaultMatch(), 5, Player.A);
         testee = scoreNRalliesFor(testee, 3, Player.A);
-        assertThat(testee.scoreA()
+        assertThat(testee.score(A)
                 .printFullScore(), equalTo("[6:0][0:0] 0:0"));
     }
 
     @Test(expected = AlreadyTerminatedException.class)
     public void given_MatchIsOverScoreAthrowsExc() {
         scoreNGamesFor(Match.startDefaultMatch(), 6+6, Player.A)
-                .scoreA();
+                .score(A);
     }
 
     @Test
@@ -69,14 +66,14 @@ public class MatchTest {
     public void given_6_0_5_0_40_0_aScores_matchIsOver() {
         Match testee = scoreNGamesFor(Match.startDefaultMatch(), 6+5, Player.A);
         testee = scoreNRalliesFor(testee, 3, Player.A);
-        assertThat(testee.scoreA().matchIsOver(), is(true));
+        assertThat(testee.score(A).matchIsOver(), is(true));
     }
 
     @Test
     public void given_6_0_5_0_40_0_aScoresGets_aWon_6_0_6_0() {
         Match testee = scoreNGamesFor(Match.startDefaultMatch(), 6+5, Player.A);
         testee = scoreNRalliesFor(testee, 3, Player.A);
-        assertThat(testee.scoreA().printFullScore(), equalTo("[6:0][6:0] - Game, Set and Match Player A"));
+        assertThat(testee.score(A).printFullScore(), equalTo("[6:0][6:0] - Game, Set and Match Player A"));
     }
 
     @Test
@@ -95,7 +92,7 @@ public class MatchTest {
     @Test
     public void given_bestOfFive_6_0_6_0_5_0_40_0_isNotOver() {
         assertThat(scoreNGamesFor(Match.bestOf(FIVE).start(), 6+6+5, Player.A)
-                .scoreA().scoreA().scoreA()
+                .score(A).score(A).score(A)
                 .matchIsOver(), is(false));
     }
 
@@ -121,7 +118,7 @@ public class MatchTest {
         testee = scoreNGamesFor(testee, 5, Player.B);
         testee = scoreNGamesFor(testee, 6, Player.A);
         testee = scoreNGamesFor(testee, 1, Player.B);
-        assertThat(testee.scoreA().printFullScore(), is("[6:6](1:0)"));
+        assertThat(testee.score(A).printFullScore(), is("[6:6] (1:0)"));
     }
 
     @Test

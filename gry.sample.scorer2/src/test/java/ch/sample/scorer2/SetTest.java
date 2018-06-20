@@ -5,6 +5,7 @@ import static org.hamcrest.core.Is.is;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static ch.sample.scorer2.Player.*;
 
 public class SetTest {
 
@@ -12,7 +13,7 @@ public class SetTest {
 
     private Set scoreNGamesFor(Set set , int numOfGames, Player player) {
         for (int i = 0; i < numOfGames; i++) {
-            set = player == Player.A ? set.scoreA() : set.scoreB();
+            set = player == Player.A ? set.score(A) : set.score(B);
         }
         return set;
     }
@@ -24,17 +25,17 @@ public class SetTest {
 
     @Test
     public void given0_0scoreAgets1_0(){
-        assertThat("must be 1:0", Set.start().scoreA().print(), equalTo("1:0"));
+        assertThat("must be 1:0", Set.start().score(A).print(), equalTo("1:0"));
     }
 
     @Test
     public void given1_0scoreAgets2_0(){
-        assertThat("must be 2:0", Set.start().scoreA().scoreA().print(), equalTo("2:0"));
+        assertThat("must be 2:0", Set.start().score(A).score(A).print(), equalTo("2:0"));
     }
 
     @Test
     public void given1_0scoreBgets1_1() {
-        assertThat("must be 1:1", Set.start().scoreA().scoreB().print(), equalTo("1:1"));
+        assertThat("must be 1:1", Set.start().score(A).score(B).print(), equalTo("1:1"));
     }
 
     @Test
@@ -58,7 +59,7 @@ public class SetTest {
     public void given7_6inTiebreakModeSetIsOver() {
         Set testee = scoreNGamesFor(Set.start(), 5, Player.B);
         testee = scoreNGamesFor(testee, 6, Player.A);
-        assertThat(testee.scoreB().scoreA().isOver(),
+        assertThat(testee.score(B).score(A).isOver(),
                 is(true));
     }
 
@@ -73,31 +74,31 @@ public class SetTest {
     public void given6_6scoreBgets6_7() {
         Set testee = scoreNGamesFor(Set.start(), 5, Player.B);
         testee = scoreNGamesFor(testee, 6, Player.A);
-        assertThat(testee.scoreB().scoreB().print(), equalTo("6:7"));
+        assertThat(testee.score(B).score(B).print(), equalTo("6:7"));
     }
 
     @Test
     public void given6_6inDefaultModeRequiresTiebreak() {
         Set testee = scoreNGamesFor(Set.start(), 5, Player.A);
         testee = scoreNGamesFor(testee, 6, Player.B);
-        assertThat(testee.scoreA().requiresTiebreak(), is(true));
+        assertThat(testee.score(A).requiresTiebreak(), is(true));
     }
 
     @Test
     public void given6_6inAdvantageModeRequiresNoTiebreak() {
         Set testee = scoreNGamesFor(Set.withoutTiebreak().start(), 5, Player.A);
         testee = scoreNGamesFor(testee, 6, Player.B);
-        assertThat(testee.scoreA().requiresTiebreak(), is(false));
+        assertThat(testee.score(A).requiresTiebreak(), is(false));
     }
 
     @Test(expected = AlreadyTerminatedException.class)
     public void givenSetOverAnotherScoreAGetsException() {
-        scoreNGamesFor(Set.start(), 6, Player.A).scoreA();
+        scoreNGamesFor(Set.start(), 6, Player.A).score(A);
     }
 
     @Test(expected = AlreadyTerminatedException.class)
     public void givenSetOverAnotherScoreBGetsException() {
-        scoreNGamesFor(Set.start(), 6, Player.A).scoreB();
+        scoreNGamesFor(Set.start(), 6, Player.A).score(B);
     }
 
 }

@@ -1,8 +1,6 @@
 package ch.sample.scorer2;
 
-import static ch.sample.scorer2.Set.*;
-
-public class Set {
+public class Set implements ScoreUnit{
 
     public enum Mode {
         ADVANTAGE, TIEBREAK;
@@ -33,18 +31,14 @@ public class Set {
         return Mode.ADVANTAGE;
     }
 
+    @Override
+    public Set score(Player player) {
+        mustNotBeTerminated();
+        return player == Player.A ? new Set(scoreA+1, scoreB, mode) : new Set(scoreA, scoreB+1, mode);
+    }
+
     public String print() {
         return String.format("%d:%d", scoreA, scoreB);
-    }
-
-    public Set scoreA() {
-        mustNotBeTerminated();
-        return new Set(scoreA+1, scoreB, mode);
-    }
-
-    public Set scoreB() {
-        mustNotBeTerminated();
-        return new Set(scoreA, scoreB+1, mode);
     }
 
     public boolean isOver() {

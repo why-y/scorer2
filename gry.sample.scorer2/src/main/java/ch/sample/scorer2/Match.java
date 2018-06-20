@@ -6,6 +6,7 @@ import ch.sample.scorer2.MatchConfiguration.BestOf;
 import ch.sample.scorer2.MatchConfiguration.Tiebreaks;
 import static ch.sample.scorer2.MatchConfiguration.BestOf.*;
 import static ch.sample.scorer2.MatchConfiguration.Tiebreaks.*;
+import static ch.sample.scorer2.Player.*;
 
 public class Match {
 
@@ -43,20 +44,11 @@ public class Match {
         return new MatchConfiguration().bestOf(maxNoOfSets);
     }
 
-    public Match scoreA() {
+    public Match score(Player player) {
         assertMatchNotOver();
-        ScoreUnit updatedScoreUnit = currentScoreUnit.scoreA();
+        ScoreUnit updatedScoreUnit = currentScoreUnit.score(player);
         if(updatedScoreUnit.isOver()) {
-            return updateSetAndStartNewGame(currentSet.scoreA());
-        }
-        return updateCurrentScoreUnit(updatedScoreUnit);
-    }
-
-    public Match scoreB() {
-        assertMatchNotOver();
-        ScoreUnit updatedScoreUnit = currentScoreUnit.scoreB();
-        if(updatedScoreUnit.isOver()) {
-            return updateSetAndStartNewGame(currentSet.scoreB());
+            return updateSetAndStartNewGame(currentSet.score(player));
         }
         return updateCurrentScoreUnit(updatedScoreUnit);
     }
@@ -72,7 +64,7 @@ public class Match {
     public String printFullScore() {
         return matchIsOver()
                 ? String. format("%s - Game, Set and Match Player %s", printTerminatedSets(), aHasWon() ? "A" : "B")
-                : String.format("%s%s%s", printTerminatedSets(), printSet(currentSet), currentScoreUnit.print());
+                : String.format("%s%s %s", printTerminatedSets(), printSet(currentSet), currentScoreUnit.print());
     }
 
     private boolean aHasWon() {

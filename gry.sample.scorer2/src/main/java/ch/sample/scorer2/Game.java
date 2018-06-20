@@ -5,7 +5,7 @@ public class Game implements ScoreUnit {
     private final int scoreA;
     private final int scoreB;
 
-    private Game(final int scoreA, final int scoreB) {
+    private Game(int scoreA, int scoreB) {
         this.scoreA = scoreA;
         this.scoreB = scoreB;
     }
@@ -15,15 +15,9 @@ public class Game implements ScoreUnit {
     }
 
     @Override
-    public Game scoreA() {
+    public Game score(Player player) {
         assertGameNotOver();
-        return new Game(getNextScore(scoreA), scoreB);
-    }
-
-    @Override
-    public Game scoreB() {
-        assertGameNotOver();
-        return new Game(scoreA, getNextScore(scoreB));
+        return player == Player.A ? new Game(getNextScore(scoreA), scoreB) : new Game(scoreA, getNextScore(scoreB));
     }
 
     @Override
@@ -37,7 +31,7 @@ public class Game implements ScoreUnit {
         if(isOver()) {
             return String.format("Game %s", getLeader());
         }
-        return isDeuce() ? "Deuce" : String.format(" %d:%d", scoreA, scoreB);
+        return isDeuce() ? "Deuce" : String.format("%d:%d", scoreA, scoreB);
     }
 
     @Override
