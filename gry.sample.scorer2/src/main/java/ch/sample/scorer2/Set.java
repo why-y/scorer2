@@ -1,22 +1,25 @@
 package ch.sample.scorer2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Set implements ScoreUnit{
 
     public enum Mode {
         ADVANTAGE, TIEBREAK;
         public Set start() {
-            return new Set(0,0, this);
+            return new Set(this, new ArrayList<ScoreUnit>(), Game.start());
         }
     };
 
-    private final int scoreA;
-    private final int scoreB;
     private final Mode mode;
+    private final List<ScoreUnit> terminatedScoreUnits;
+    private final ScoreUnit currentScoreUnit;
 
-    private Set(int scoreA, int scoreB, Mode mode) {
-        this.scoreA = scoreA;
-        this.scoreB = scoreB;
+    private Set(Mode mode, final List<ScoreUnit> terminatedScoreUnits, ScoreUnit currentScoreUnit) {
         this.mode = mode;
+        this.terminatedScoreUnits = terminatedScoreUnits;
+        this.currentScoreUnit = currentScoreUnit;
     }
 
     public static Set start() {
@@ -34,35 +37,60 @@ public class Set implements ScoreUnit{
     @Override
     public Set score(Player player) {
         mustNotBeTerminated();
-        return player == Player.A ? new Set(scoreA+1, scoreB, mode) : new Set(scoreA, scoreB+1, mode);
+        ScoreUnit updatedScoreUnit = currentScoreUnit.score(player);
+        if(updatedScoreUnit.isOver()) {
+            terminatedScoreUnits.add(updatedScoreUnit);
+            return new Set(this.mode, this.terminatedScoreUnits, startNextScoreUnit());
+        }
+        else {
+            return new Set(this.mode, this.terminatedScoreUnits, updatedScoreUnit);
+        }
     }
 
+    @Override
     public String print() {
-        return String.format("%d:%d", scoreA, scoreB);
+        return isOver() ?
+                String.format("[%s]", printTerminatedGames()) :
+                String.format("%s %s", printTerminatedGames(), printCurrentScoreUnit());
     }
 
+    @Override
     public boolean isOver() {
-        return aHasWon() || bHasWon();
+        return isWonBy(Player.A) || isWonBy(Player.B);
     }
 
-    public boolean aHasWon() {
-        return hasWonByTwoGames(scoreA, scoreB) || hasWonInTiebreak(scoreA, scoreB);
+    @Override
+    public boolean isWonBy(Player player) {
+        Player opponent = player == Player.A ? Player.B : Player.A;
+        return hasWonByTwoGames(noOfGamesWonBy(player), noOfGamesWonBy(opponent)) || hasWonInTiebreak(noOfGamesWonBy(player), noOfGamesWonBy(opponent));
     }
 
-    public boolean bHasWon() {
-        return hasWonByTwoGames(scoreB, scoreA) || hasWonInTiebreak(scoreB, scoreA);
+    boolean requiresTiebreak() {
+        return isaTiebreakSet() && noOfGamesWonBy(Player.A) == 6 && noOfGamesWonBy(Player.B) == 6;
     }
 
-    private boolean hasWonInTiebreak(int potentialWinnerScore, int opponentScore) {
+    private ScoreUnit startNextScoreUnit() {
+        return requiresTiebreak() ? Tiebreak.start() : Game.start();
+    }
+
+    private String printTerminatedGames() {
+        return String.format("%d:%d", noOfGamesWonBy(Player.A), noOfGamesWonBy(Player.B));
+    }
+
+    private String printCurrentScoreUnit() {
+        return isOver() ? "" : currentScoreUnit.print();
+    }
+
+    private long noOfGamesWonBy(Player player) {
+        return terminatedScoreUnits.stream().filter(su -> su.isWonBy(player)).count();
+    }
+
+    private boolean hasWonInTiebreak(long potentialWinnerScore, long opponentScore) {
         return isaTiebreakSet() && potentialWinnerScore == 7 && opponentScore == 6;
     }
 
-    private boolean hasWonByTwoGames(int potentialWinnerScore, int opponentScore) {
+    private boolean hasWonByTwoGames(long potentialWinnerScore, long opponentScore) {
         return potentialWinnerScore >= 6 && potentialWinnerScore-opponentScore >=2;
-    }
-
-    public boolean requiresTiebreak() {
-        return isaTiebreakSet() && scoreA == 6 && scoreB == 6;
     }
 
     private boolean isaTiebreakSet() {

@@ -31,12 +31,17 @@ public class Game implements ScoreUnit {
         if(isOver()) {
             return String.format("Game %s", getLeader());
         }
-        return isDeuce() ? "Deuce" : String.format("%d:%d", scoreA, scoreB);
+        return String.format("%d:%d", scoreA, scoreB);
     }
 
     @Override
     public boolean isOver() {
-        return isTwoRalliesApart() && (scoreA>40 || scoreB>40);
+        return isWonBy(Player.A) || isWonBy(Player.B);
+    }
+
+    @Override
+    public boolean isWonBy(Player player) {
+        return isTwoRalliesApart() && player == Player.A ? scoreA > 40 : scoreB > 40;
     }
 
     private int getNextScore(final int currentScore) {
@@ -55,9 +60,9 @@ public class Game implements ScoreUnit {
         return Math.abs(scoreA - scoreB) > 15;
     }
 
-    private char getLeader() {
-        if(scoreA==scoreB) return '-';
-        return scoreA > scoreB ? 'A' : 'B';
+    private Player getLeader() {
+        if(scoreA==scoreB) return null;
+        return scoreA > scoreB ? Player.A : Player.B;
     }
 
     private void assertGameNotOver() {

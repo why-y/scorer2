@@ -24,6 +24,11 @@ public class Tiebreak implements ScoreUnit {
     }
 
     @Override
+    public boolean isWonBy(Player player) {
+        return (player == Player.A ? scoreA >=7 : scoreB >=7) && oneIsTwoRalliesAhead();
+    }
+
+    @Override
     public String print() {
         return String.format("(%d:%d)", scoreA, scoreB);
     }
