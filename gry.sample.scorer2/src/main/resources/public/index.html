@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tennis Match Scoreboard</title>
+    <script src="js/main.js" type="application/javascript"></script>
+    <script src="js/axios/dist/axios.min.js"></script>
+    <link rel="Stylesheet" href="css/main.css" type="text/css" />
+</head>
+<body>
+    <h1 id="title">Tennis Match Scoreboard</h1>
+    <div id="score">Match not yet started!</div>
+    <div id="buttoncontainer">
+        <button class="button" onclick="startMatch();">Start Match</button>
+        <button class="scorebutton" onclick="score('A');">Score A</button>
+        <button class="scorebutton" onclick="score('B');">Score B</button>
+    </div>
+</body>
+</html>

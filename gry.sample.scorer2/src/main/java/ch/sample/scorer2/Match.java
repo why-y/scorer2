@@ -1,13 +1,15 @@
 package ch.sample.scorer2;
 
+import ch.sample.scorer2.MatchConfiguration.BestOf;
+import ch.sample.scorer2.MatchConfiguration.Tiebreaks;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.sample.scorer2.MatchConfiguration.BestOf;
-import ch.sample.scorer2.MatchConfiguration.Tiebreaks;
-import static ch.sample.scorer2.MatchConfiguration.BestOf.*;
-import static ch.sample.scorer2.MatchConfiguration.Tiebreaks.*;
-import static ch.sample.scorer2.Player.*;
+import static ch.sample.scorer2.MatchConfiguration.BestOf.THREE;
+import static ch.sample.scorer2.MatchConfiguration.Tiebreaks.IN_ALL_SETS;
+import static ch.sample.scorer2.Player.A;
+import static ch.sample.scorer2.Player.B;
 
 public class Match implements ScoreUnit {
 

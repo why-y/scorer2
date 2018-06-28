@@ -1,15 +1,14 @@
 package ch.sample.scorer2;
 
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.Is.is;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-import static ch.sample.scorer2.Player.*;
+import static ch.sample.scorer2.Player.A;
+import static ch.sample.scorer2.Player.B;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
 
 public class SetTest {
-
-    private enum Player {A, B};
 
     private Set scoreNRalliesFor(Set set, int numOfRallies, Player player) {
         for (int i = 0; i < numOfRallies; i++) {
@@ -28,6 +27,27 @@ public class SetTest {
     @Test
     public void  initialScoreIs0_0(){
         assertThat("initial score must be 0:0", Set.start().print(), equalTo("0:0 0:0"));
+    }
+
+    @Test
+    public void  given0_0deuceScoreBgets0_0_advantageB(){
+        Set testee = scoreNRalliesFor(Set.start(),3, A);
+        testee = scoreNRalliesFor(testee, 4, B);
+        assertThat("must be 0:0 Advangage B", testee.score(A).score(B).print(), equalTo("0:0 Advantage B"));
+    }
+
+    @Test
+    public void  testDeuce0_0_Deuce (){
+        Set testee = scoreNRalliesFor(Set.start(),3, A);
+        testee = scoreNRalliesFor(testee, 4, B);
+        assertThat("must be 0:0 Deuce", testee.score(A).print(), equalTo("0:0 Deuce"));
+    }
+
+    @Test
+    public void  test0_0_AdvantageB(){
+        Set testee = scoreNRalliesFor(Set.start(),3, A);
+        testee = scoreNRalliesFor(testee, 4, B).score(A);
+        assertThat("must be 0:0 Advantage B", testee.score(B).print(), equalTo("0:0 Advantage B"));
     }
 
     @Test
@@ -109,6 +129,15 @@ public class SetTest {
         Set testee = scoreNGamesFor(Set.withoutTiebreak().start(), 5, Player.A);
         testee = scoreNGamesFor(testee, 6, Player.B);
         assertThat(testee.score(A).requiresTiebreak(), is(false));
+    }
+
+    @Test
+    public void given0_0AdvantageAscoreAgets1_0_0_0() {
+        Set testee = scoreNRalliesFor(Set.start(), 3, Player.A);
+        testee = scoreNRalliesFor(testee, 4, Player.B);
+        testee = testee.score(Player.A).score(Player.A);
+        testee = testee.score(Player.A);
+        assertThat(testee.print(), is("1:0 0:0"));
     }
 
     @Test(expected = AlreadyTerminatedException.class)

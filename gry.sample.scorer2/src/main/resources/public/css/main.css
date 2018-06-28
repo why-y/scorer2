@@ -1,0 +1,56 @@
+body {
+    background-color: steelblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+#score {
+    color: wheat;
+    border: 5px solid wheat;
+    background: green;
+    font: bold 3rem Serif;
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 50rem;
+    margin: 5rem auto;
+}
+
+#buttoncontainer {
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 50rem;
+    margin: 5rem auto;
+}
+
+#title {
+    color: darkgray;
+    text-align: center;
+    background-color: darkslategrey;
+    padding: 0.5rem;
+}
+
+.button {
+    font: 1.5rem sans-serif;
+    padding: 1rem 2rem;
+    margin: 0 2rem;
+    border-radius: 1rem;
+    background-color: aquamarine;
+    border: 3px solid darkgray;
+}
+
+.scorebutton {
+    font: 1.5rem sans-serif;
+    padding: 1rem 2rem;
+    margin: 0 2rem;
+    border-radius: 1rem;
+    background-color: azure;
+    border: 3px solid darkgray;
+}
