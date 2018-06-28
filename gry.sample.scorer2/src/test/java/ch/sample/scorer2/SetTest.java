@@ -37,6 +37,16 @@ public class SetTest {
     }
 
     @Test
+    public void  given0_0advantageAscoreAgets1_0_0_0(){
+        Set testee = scoreNRalliesFor(Set.start(),3, A);
+        testee = scoreNRalliesFor(testee, 4, B);
+        testee = testee.score(A).score(A);
+        testee = testee.score(B).score(B);
+        testee = testee.score(A).score(A);
+        assertThat("must be 1:0 0:0", testee.score(A).print(), equalTo("1:0 0:0"));
+    }
+
+    @Test
     public void  testDeuce0_0_Deuce (){
         Set testee = scoreNRalliesFor(Set.start(),3, A);
         testee = scoreNRalliesFor(testee, 4, B);

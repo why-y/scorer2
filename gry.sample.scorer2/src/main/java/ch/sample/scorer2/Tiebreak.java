@@ -1,5 +1,7 @@
 package ch.sample.scorer2;
 
+import static ch.sample.scorer2.Player.*;
+
 public class Tiebreak implements ScoreUnit {
     private final int scoreA;
     private final int scoreB;
@@ -15,17 +17,17 @@ public class Tiebreak implements ScoreUnit {
 
     @Override
     public Tiebreak score(Player player) {
-        return player == Player.A ? new Tiebreak(scoreA+1, scoreB) : new Tiebreak(scoreA, scoreB+1);
+        return player == A ? new Tiebreak(scoreA+1, scoreB) : new Tiebreak(scoreA, scoreB+1);
     }
 
     @Override
     public boolean isOver() {
-        return (scoreA >= 7 || scoreB >= 7) && oneIsTwoRalliesAhead();
+        return isWonBy(A) || isWonBy(B);
     }
 
     @Override
     public boolean isWonBy(Player player) {
-        return (player == Player.A ? scoreA >=7 : scoreB >=7) && oneIsTwoRalliesAhead();
+        return isTwoRalliesAhead(player) && (player == A ? scoreA >=7 : scoreB >=7);
     }
 
     @Override
@@ -33,8 +35,10 @@ public class Tiebreak implements ScoreUnit {
         return String.format("(%d:%d)", scoreA, scoreB);
     }
 
-    private boolean oneIsTwoRalliesAhead() {
-        return Math.abs(scoreA-scoreB) >= 2;
+    private boolean isTwoRalliesAhead(Player player) {
+        return player == A ?
+                (scoreA - scoreB) >= 2 :
+                (scoreB - scoreA) >= 2;
     }
 
 }

@@ -1,16 +1,21 @@
 package ch.sample.scorer2;
 
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.Is.is;
-
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-import static ch.sample.scorer2.Player.*;
+import static ch.sample.scorer2.Player.A;
+import static ch.sample.scorer2.Player.B;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
 
 public class TiebreakTest {
 
-    private final Tiebreak SCORE_5_5 = Tiebreak.start().score(A).score(B).score(A).score(B).score(A).score(B).score(A).score(B).score(A).score(B);
+    private Tiebreak scoreNRalliesFor(Tiebreak tiebreak, int numOfRallies, Player player) {
+        for (int i = 0; i < numOfRallies; i++) {
+            tiebreak = player == Player.A ? tiebreak.score(A) : tiebreak.score(B);
+        }
+        return tiebreak;
+    }
 
     @Test
     public void startTiebreakScoreIs0_0() {
@@ -34,7 +39,9 @@ public class TiebreakTest {
 
     @Test
     public void given6_5tiebreakIsNotOver() {
-        assertThat("on 6:5 the tiebreak must not be over", SCORE_5_5.score(A).isOver(), is(false));
+        Tiebreak testee = scoreNRalliesFor(Tiebreak.start(), 5, B);
+        testee = scoreNRalliesFor(testee, 6, A);
+        assertThat("on 6:5 the tiebreak must not be over", testee.isOver(), is(false));
     }
 
     @Test
@@ -44,12 +51,23 @@ public class TiebreakTest {
 
     @Test
     public void given7_5tiebreakIstOver() {
-        assertThat("on 7:5 the tiebreack must over", SCORE_5_5.score(A).score(A).isOver(), is(true));
+        Tiebreak testee = scoreNRalliesFor(Tiebreak.start(), 5, B);
+        testee = scoreNRalliesFor(testee, 6, A);
+        assertThat("on 7:5 the tiebreack must over", testee.score(A).isOver(), is(true));
     }
 
     @Test
     public void given7_7scoreAgets8_7() {
-        assertThat(SCORE_5_5.score(A).score(B).score(A).score(B).score(A).print(), equalTo("(8:7)"));
+        Tiebreak testee = scoreNRalliesFor(Tiebreak.start(), 5, B);
+        testee = scoreNRalliesFor(testee, 6, A);
+        assertThat(testee.score(B).score(A).score(B).score(A).print(), equalTo("(8:7)"));
+    }
+
+    @Test
+    public void given8_7scoreAgetsWonByA() {
+        Tiebreak testee = scoreNRalliesFor(Tiebreak.start(), 5, B);
+        testee = scoreNRalliesFor(testee, 6, A);
+        assertThat(testee.score(B).score(A).score(B).score(A).score(A).isWonBy(A), equalTo(true));
     }
 
 }
