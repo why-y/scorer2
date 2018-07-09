@@ -3,6 +3,8 @@ package ch.sample.scorer2;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ch.sample.scorer2.Player.*;
+
 public class Set implements ScoreUnit{
 
     public enum Mode {
@@ -56,17 +58,39 @@ public class Set implements ScoreUnit{
 
     @Override
     public boolean isOver() {
-        return isWonBy(Player.A) || isWonBy(Player.B);
+        return isWonBy(A) || isWonBy(B);
     }
 
     @Override
     public boolean isWonBy(Player player) {
-        Player opponent = player == Player.A ? Player.B : Player.A;
+        Player opponent = player == A ? B : A;
         return hasWonByTwoGames(noOfGamesWonBy(player), noOfGamesWonBy(opponent)) || hasWonInTiebreak(noOfGamesWonBy(player), noOfGamesWonBy(opponent));
     }
 
+    //////////// for JSON serializing /////////////
+    public Mode getMode() {
+        return mode;
+    }
+
+    public List<ScoreUnit> getTerminatedScoreUnits() {
+        return terminatedScoreUnits;
+    }
+
+    public ScoreUnit getCurrentScoreUnit() {
+        return currentScoreUnit;
+    }
+    
+    public long getScoreA() {
+        return noOfGamesWonBy(A);
+    }
+    
+    public long getScoreB() {
+        return noOfGamesWonBy(B);
+    }
+    ///////////////////////////////////////////////
+
     boolean requiresTiebreak() {
-        return isaTiebreakSet() && noOfGamesWonBy(Player.A) == 6 && noOfGamesWonBy(Player.B) == 6;
+        return isaTiebreakSet() && noOfGamesWonBy(A) == 6 && noOfGamesWonBy(B) == 6;
     }
 
     private ScoreUnit startNextScoreUnit() {
@@ -74,7 +98,7 @@ public class Set implements ScoreUnit{
     }
 
     private String printTerminatedGames() {
-        return String.format("%d:%d", noOfGamesWonBy(Player.A), noOfGamesWonBy(Player.B));
+        return String.format("%d:%d", noOfGamesWonBy(A), noOfGamesWonBy(B));
     }
 
     private String printCurrentScoreUnit() {

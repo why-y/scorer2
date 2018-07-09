@@ -49,6 +49,26 @@ public class Game implements ScoreUnit {
         return isTwoRalliesAhead(player) && (player == A ? scoreA > 40 : scoreB > 40);
     }
 
+    //////////// for JSON serializing /////////////
+    public String getScoreA() {
+        if(scoreA>=40 && scoreA==scoreB) return "Deuce";
+        if(scoreA>40 && scoreA>scoreB) return "Advantage";
+        if(scoreB>40) return "";
+        return String.valueOf(scoreA);
+    }
+
+    public String getScoreB() {
+        if(scoreB>=40 && scoreA==scoreB) return "Deuce";
+        if(scoreB>40 && scoreB>scoreA) return "Advantage";
+        if(scoreA>40) return "";
+        return String.valueOf(scoreB);
+    }
+
+    public boolean isTiebreak() {
+        return false;
+    }
+    ///////////////////////////////////////////////
+
     private int getNextScore(final int currentScore) {
         return currentScore < 30 ? currentScore + 15 : currentScore + 10;
     }

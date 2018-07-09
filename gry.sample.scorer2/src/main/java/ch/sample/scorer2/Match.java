@@ -79,6 +79,24 @@ public class Match implements ScoreUnit {
         return this.matchMode == matchMode;
     }
 
+    //////////// for JSON serializing /////////////
+    public List<Set> getTerminatedSets() {
+        return terminatedSets;
+    }
+
+    public Set getCurrentSet() {
+        return currentSet;
+    }
+
+    public Tiebreaks getTiebreakMode() {
+        return tiebreakMode;
+    }
+
+    public BestOf getMatchMode() {
+        return matchMode;
+    }
+    ///////////////////////////////////////////////
+
     private Set startNextSet() {
         return (tiebreakMode == Tiebreaks.IN_NO_SET || (tiebreakMode == Tiebreaks.IN_ALL_BUT_THE_FINAL_SET && isFinalSet())) ?
                 Set.withoutTiebreak().start() : Set.withTiebreak().start();

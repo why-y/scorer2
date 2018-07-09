@@ -35,6 +35,21 @@ public class Tiebreak implements ScoreUnit {
         return String.format("(%d:%d)", scoreA, scoreB);
     }
 
+    //////////// for JSON serializing /////////////
+    public String getScoreA() {
+        return String.valueOf(scoreA);
+    }
+
+    public String getScoreB() {
+        return String.valueOf(scoreB);
+    }
+
+    public boolean isTiebreak() {
+        return true;
+    }
+
+    ///////////////////////////////////////////////
+
     private boolean isTwoRalliesAhead(Player player) {
         return player == A ?
                 (scoreA - scoreB) >= 2 :

@@ -5,8 +5,8 @@ import static ch.sample.scorer2.MatchConfiguration.Tiebreaks.IN_ALL_SETS;
 
 public class MatchConfiguration {
 
-    enum BestOf {THREE, FIVE}
-    enum Tiebreaks {IN_NO_SET, IN_ALL_SETS, IN_ALL_BUT_THE_FINAL_SET}
+    public enum BestOf {THREE, FIVE}
+    public enum Tiebreaks {IN_NO_SET, IN_ALL_SETS, IN_ALL_BUT_THE_FINAL_SET}
 
     private BestOf matchMode = THREE;
     private Tiebreaks tiebreakSetup = IN_ALL_SETS;
