@@ -12,13 +12,13 @@
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     </head>
-    <body class="bg-light" style="font-size: 2rem">
+    <body class="bg-light">
         <div class="container jumbotron">
-            <h1 id="title">Tennis Match Scoreboard</h1>
+            <h1>Tennis Match Scoreboard</h1>
         </div>
 
-        <div class="container bg-warning text-right p-5 mb-5">
-            <div class="row text-left mr-2" style="font-size: 1.5rem">
+        <div class="container border-dark bg-warning text-right p-5 mb-5" id="score-board" hidden>
+            <div class="row text-left mr-2">
                 <div class="col-4">Player</div>
                 <div class="col">Set 1</div>
                 <div class="col">Set 2</div>
@@ -27,9 +27,9 @@
                 <div class="col">Set 5</div>
                 <div id="scoreUnitLabel" class="col-2">Game</div>
             </div>
-            <div class="row bg-success mr-2">
+            <div class="row bg-success mr-2" style="font-size: 2rem">
                 <div class="col-4 text-left bg-warning">
-                    <button id="score-btn-a" class="btn-lg btn-primary w-75" disabled onclick="score('A');">____</button>
+                    <button id="score-btn-a" class="btn-lg btn-primary w-75" onclick="score('A');">Player A</button>
                 </div>
                 <div id="set1-score-a" class="col border"></div>
                 <div id="set2-score-a" class="col border"></div>
@@ -38,9 +38,9 @@
                 <div id="set5-score-a"  class="col border"></div>
                 <div id="current-game-score-a" class="col-2 border"></div>
             </div>
-            <div class="row bg-success mr-2">
+            <div class="row bg-success mr-2" style="font-size: 2rem">
                 <div class="col-4 text-left bg-warning">
-                    <button id="score-btn-b" class="btn-lg btn-primary w-75" disabled onclick="score('B');">____</button>
+                    <button id="score-btn-b" class="btn-lg btn-primary w-75" onclick="score('B');">Player B</button>
                 </div>
                 <div id="set1-score-b" class="col border"></div>
                 <div id="set2-score-b" class="col border"></div>
@@ -49,7 +49,7 @@
                 <div id="set5-score-b" class="col border"></div>
                 <div id="current-game-score-b" class="col-2 border"></div>
             </div>
-            <div class="row text-right bg-warning mr-2" style="font-size: 1.5rem">
+            <div class="row text-right bg-warning mr-2">
                 <div class="col-4"></div>
                 <div id="status-set1" class="col"></div>
                 <div id="status-set2" class="col"></div>
@@ -58,33 +58,53 @@
                 <div id="status-set5" class="col"></div>
                 <div id="status-game" class="col-2"></div>
             </div>
-            <div class="row text-left">
-                <div class="col-4 btn-group-sm" data-toggle="buttons">
-                    <label class="btn btn-sm">
+        </div>
+
+        <div class="container jumbotron" id="match-setup">
+            <h1>Setup Match</h1>
+            <p>
+                <label class="font-weight-bold text-sm-left mr-3">Player A</label>
+                <input type="text" id="player-a">
+            </p>
+            <p>
+                <label class="font-weight-bold text-sm-left mr-3">Player B</label>
+                <input type="text" id="player-b">
+            </p>
+            <p>
+                <label class="font-weight-bold text-sm-left mr-3">Mode</label>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn btn-outline-secondary active">
                         <input type="radio" name="match-mode" value="best-of-3" autocomplete="off" checked> Best Of 3
                     </label>
-                    <label class="btn btn-sm">
+                    <label class="btn btn btn-outline-secondary">
                         <input type="radio" name="match-mode" value="best-of-5" autocomplete="off"> Best Of 5
                     </label>
                 </div>
-                <div class="col btn-group-sm" data-toggle="buttons">
-                    <label class="btn btn-sm">
+            </p>
+            <p>
+                <label class="font-weight-bold text-sm-left mr-3">Tiebreaks</label>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn btn-outline-secondary active">
                         <input type="radio" name="tiebreak-mode" value="in-all-sets" autocomplete="off"> In All Sets
                     </label>
-                    <label class="btn btn-sm">
-                        <input type="radio" name="tiebreak-mode" value="in-no-set" autocomplete="off"> In NO Sets
+                    <label class="btn btn btn-outline-secondary">
+                        <input type="radio" name="tiebreak-mode" value="in-no-set" autocomplete="off"> In No Sets
                     </label>
-                    <label class="btn btn-sm">
+                    <label class="btn btn btn-outline-secondary">
                         <input type="radio" name="tiebreak-mode" value="all-but-last-set" autocomplete="off" checked> In All But Last Set
                     </label>
                 </div>
-            </div>
+            </p>
+                <button class="btn-primary btn-lg" onclick="startMatch()">Start</button>
+            <p>
+
+            </p>
         </div>
 
-        <div class="container jumbotron">
-            <div class="row text-left">
-                <button class="btn-lg btn-primary" onclick="startMatch();">Start Match</button>
-            </div>
+        <div class="container jumbotron" id="terminate-bar" hidden>
+            <button class="btn-primary btn-lg" onclick="startMatch()">Reset Match</button>
+            <button class="btn-secondary btn-lg" onclick="startNewMatch()">New Match</button>
         </div>
+
     </body>
 </html>

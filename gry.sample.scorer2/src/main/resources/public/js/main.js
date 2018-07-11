@@ -15,26 +15,30 @@ function getScore() {
     });
 }
 
+function startNewMatch() {
+    location.reload();
+}
+
 function startMatch() {
-    matchSetup.matchMode = getMatchMode();
-    matchSetup.tiebreakMode = getTiebreakMode();
+    var matchSetup = getMatchSetup();
+    setPlayerNames(matchSetup.playerA, matchSetup.playerB);
     console.log("matchSetup: ", matchSetup);
     axios.post(api + 'match', matchSetup).then(function (value) {
-        cleanScoreBoard();
-        enableScoreButtons();
+        resetScoreBoard();
+        hideMatchSetupPanel();
+        showScoreBoard();
         getScore();
     }).catch(function (reason) {
         console.error(reason);
     });
 }
 
-function enableScoreButtons() {
-    var scoreButtonA =  document.getElementById("score-btn-a");
-    var scoreButtonB =  document.getElementById("score-btn-b");
-    scoreButtonA.removeAttribute("disabled");
-    scoreButtonA.innerHTML = "Player A";
-    scoreButtonB.removeAttribute("disabled");
-    scoreButtonB.innerHTML = "Player B";
+function resetMatchSetup() {
+    hideScoreBoard();
+    showMatchSetupPanel();
+    hideMatchSetupPanel();
+    showScoreBoard();
+
 }
 
 function score(player) {
@@ -85,7 +89,7 @@ function showTiebreakScore(set, setNo) {
     statusCell.setAttribute("class", "col bg-success border");
 }
 
-function cleanScoreBoard() {
+function resetScoreBoard() {
     var setNumbers = [1, 2, 3, 4, 5];
     setNumbers.forEach(function(setNo) {
         document.getElementById("set" + setNo + "-score-a").innerHTML = "";
@@ -93,6 +97,33 @@ function cleanScoreBoard() {
         document.getElementById("status-set"+ setNo).setAttribute("class", "col");
     });
     document.getElementById("status-game").setAttribute("class", "col-2");
+}
+
+function getMatchSetup() {
+    var setup = {};
+    setup.matchMode = getMatchMode();
+    setup.tiebreakMode = getTiebreakMode();
+    setup.playerA = document.getElementById("player-a").value;
+    setup.playerB = document.getElementById("player-b").value;
+    return setup;
+}
+
+function showScoreBoard() {
+    document.getElementById("score-board").removeAttribute("hidden");
+    document.getElementById("terminate-bar").removeAttribute("hidden");
+}
+
+function hideScoreBoard() {
+    document.getElementById("score-board").setAttribute("hidden", true);
+    document.getElementById("terminate-bar").setAttribute("hidden", true);
+}
+
+function showMatchSetupPanel() {
+    document.getElementById("match-setup").removeAttribute("hidden");
+}
+
+function hideMatchSetupPanel() {
+    document.getElementById("match-setup").setAttribute("hidden", true);
 }
 
 function isTiebreak(scoringUnit) {
@@ -105,6 +136,11 @@ function getLastScoringUnit(set) {
     var scoringUnits = set.terminatedScoreUnits;
     console.log(" --- terminatedScoreUnits:", scoringUnits, scoringUnits.length, scoringUnits[scoringUnits.length-1]);
     return scoringUnits.length==0 ? null : scoringUnits[scoringUnits.length-1];
+}
+
+function setPlayerNames(playerA, playerB) {
+    document.getElementById("score-btn-a").innerHTML = playerA;
+    document.getElementById("score-btn-b").innerHTML = playerB;
 }
 
 function getMatchMode() {
