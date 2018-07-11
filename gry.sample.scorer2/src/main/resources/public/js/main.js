@@ -33,14 +33,6 @@ function startMatch() {
     });
 }
 
-function resetMatchSetup() {
-    hideScoreBoard();
-    showMatchSetupPanel();
-    hideMatchSetupPanel();
-    showScoreBoard();
-
-}
-
 function score(player) {
     console.log('score(' + player + ')');
     axios.post(api + 'match/rally', {'Player': player}).then(function (value) {
@@ -54,15 +46,16 @@ function score(player) {
 function showScore(matchData) {
     console.log('showScore()', matchData, matchData.terminatedSets);
     var sets = matchData.terminatedSets;
-    sets.push(matchData.currentSet);
-    showSetScores(sets);
     if(matchData.over == true) {
         console.log("##### GAME OVER #####");
+        resetGameScore();
         disableScoreButtons();
     }
     else {
+        sets.push(matchData.currentSet);
         showCurrentScoreUnit(matchData.currentSet.currentScoreUnit);
     }
+    showSetScores(sets);
 }
 
 function showSetScores(sets) {
@@ -85,6 +78,7 @@ function showCurrentScoreUnit(currentScoreUnit) {
     document.getElementById("current-game-score-b").innerHTML = currentScoreUnit.scoreB;
 }
 
+
 function showTiebreakScore(set, setNo) {
     var lastScoringUnit = getLastScoringUnit(set);
     var statusCell = document.getElementById("status-set"+ setNo);
@@ -102,8 +96,14 @@ function resetScoreBoard() {
         document.getElementById("set" + setNo + "-score-b").innerHTML = "";
         document.getElementById("status-set"+ setNo).setAttribute("class", "col");
     });
+    resetGameScore();
     document.getElementById("status-game").setAttribute("class", "col-2");
     enableScoreButtons();
+}
+
+function resetGameScore() {
+    $("#current-game-score-a").html("");
+    $("#current-game-score-b").html("");
 }
 
 function getMatchSetup() {
@@ -125,10 +125,6 @@ function hideScoreBoard() {
     document.getElementById("terminate-bar").setAttribute("hidden", true);
 }
 
-function showMatchSetupPanel() {
-    document.getElementById("match-setup").removeAttribute("hidden");
-}
-
 function hideMatchSetupPanel() {
     document.getElementById("match-setup").setAttribute("hidden", true);
 }
@@ -146,8 +142,8 @@ function getLastScoringUnit(set) {
 }
 
 function setPlayerNames(playerA, playerB) {
-    $("#score-btn-a").innerHTML = playerA;
-    $("#score-btn-b").innerHTML = playerB;
+    $("#score-btn-a").text(playerA);
+    $("#score-btn-b").text(playerB);
 }
 
 function getMatchMode() {
