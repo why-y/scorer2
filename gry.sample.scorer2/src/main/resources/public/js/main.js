@@ -56,7 +56,13 @@ function showScore(matchData) {
     var sets = matchData.terminatedSets;
     sets.push(matchData.currentSet);
     showSetScores(sets);
-    showCurrentScoreUnit(matchData.currentSet.currentScoreUnit);
+    if(matchData.over == true) {
+        console.log("##### GAME OVER #####");
+        disableScoreButtons();
+    }
+    else {
+        showCurrentScoreUnit(matchData.currentSet.currentScoreUnit);
+    }
 }
 
 function showSetScores(sets) {
@@ -97,6 +103,7 @@ function resetScoreBoard() {
         document.getElementById("status-set"+ setNo).setAttribute("class", "col");
     });
     document.getElementById("status-game").setAttribute("class", "col-2");
+    enableScoreButtons();
 }
 
 function getMatchSetup() {
@@ -139,8 +146,8 @@ function getLastScoringUnit(set) {
 }
 
 function setPlayerNames(playerA, playerB) {
-    document.getElementById("score-btn-a").innerHTML = playerA;
-    document.getElementById("score-btn-b").innerHTML = playerB;
+    $("#score-btn-a").innerHTML = playerA;
+    $("#score-btn-b").innerHTML = playerB;
 }
 
 function getMatchMode() {
@@ -163,4 +170,14 @@ function getTiebreakMode() {
         }
     });
     return result;
+}
+
+function disableScoreButtons() {
+    $("#score-btn-a").prop('disabled', true);
+    $("#score-btn-b").prop('disabled', true);
+}
+
+function enableScoreButtons() {
+    $("#score-btn-a").prop('disabled', false);
+    $("#score-btn-b").prop('disabled', false);
 }
