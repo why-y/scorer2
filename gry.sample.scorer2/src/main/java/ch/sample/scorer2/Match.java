@@ -95,6 +95,12 @@ public class Match implements ScoreUnit {
     public BestOf getMatchMode() {
         return matchMode;
     }
+
+    public Player getWinner() {
+        if(isWonBy(A)) return A;
+        if(isWonBy(B)) return B;
+        return null;
+    }
     ///////////////////////////////////////////////
 
     private Set startNextSet() {

@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7a6f1faa-3790-4618-bb71-b92fc4d02538" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -34,6 +36,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="scorer2" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="scorer2" />
   </component>
@@ -42,11 +61,12 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="104" column="66" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="66" />
+            <state relative-caret-position="307">
+              <caret line="65" column="80" selection-start-line="65" selection-start-column="80" selection-end-line="65" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,8 +75,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="105" column="25" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="200" selection-start-line="200" selection-end-line="200" />
             </state>
           </provider>
         </entry>
@@ -64,8 +84,8 @@
       <file leaf-file-name="Match.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="1332">
+              <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1360#1361#0" expanded="true" />
@@ -122,13 +142,11 @@
       <file leaf-file-name="ScoreRestController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/webapp/ScoreRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="733">
+            <state relative-caret-position="702">
               <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1971#1972#0" expanded="true" />
-                <element signature="e#2027#2028#0" expanded="true" />
-                <element signature="e#2217#2218#0" expanded="true" />
+                <element signature="e#2070#2071#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,7 +155,7 @@
       <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
         <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="14166">
               <caret line="843" selection-start-line="843" selection-end-line="843" />
             </state>
           </provider>
@@ -146,7 +164,7 @@
       <file leaf-file-name="Class.java" pinned="false" current-in-tab="false">
         <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/Class.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="58122">
               <caret line="3321" selection-start-line="3321" selection-end-line="3321" />
             </state>
           </provider>
@@ -169,36 +187,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
-      <find>scoreB()</find>
-      <find>scoreA()</find>
-      <find>printSet</find>
-      <find>MatchConfiguration</find>
-      <find>updateTerminatedScoreUnitsAndStartNewGame</find>
-      <find>startNextScoreUnit</find>
-      <find>Set.</find>
-      <find>startNextSet</find>
-      <find>print(</find>
-      <find>isWonBy</find>
-      <find>isOv</find>
-      <find>false</find>
-      <find>Player.A</find>
-      <find>Player.B</find>
-      <find>text</find>
-      <find>showTiebreakScore</find>
-      <find>toggle</find>
-      <find>font</find>
-      <find>matchMode</find>
-      <find>cleanScoreBoard</find>
-      <find>resetScoreBoard</find>
-      <find>va</find>
       <find>getMatchSetup</find>
       <find>setPlayerNames</find>
       <find>startMatch</find>
       <find>clearSetup</find>
       <find>setAttribute</find>
-      <find>disableScoreButtons</find>
       <find>score-btn</find>
+      <find>showMatchSetupPanel</find>
+      <find>current-game-score-b</find>
+      <find>resetScoreBoard</find>
+      <find>disableScoreButtons</find>
+      <find>showMatchOver</find>
+      <find>$(</find>
+      <find>resetPlayerStatus</find>
+      <find>matchSetup</find>
+      <find>hideScoreBoard</find>
+      <find>hi</find>
+      <find>document</find>
+      <find>match-mode</find>
+      <find>matchModeRa</find>
+      <find>hidden</find>
+      <find>hide</find>
+      <find>resetSe</find>
+      <find>score-board</find>
+      <find>reset</find>
+      <find>player-a</find>
+      <find>.html</find>
+      <find>status-bar</find>
+      <find>setStatusText</find>
+      <find>font</find>
+      <find>font-size</find>
     </findStrings>
     <replaceStrings>
       <replace>score(B)</replace>
@@ -206,6 +224,7 @@
       <replace>score(A)</replace>
       <replace>A</replace>
       <replace>B</replace>
+      <replace>.text</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -214,12 +233,12 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="/usr/lib/gradle/4.8" />
+        <entry key="$PROJECT_DIR$" value="/usr/lib/gradle/4.8.1" />
       </map>
     </option>
     <option name="myGradleVersions">
       <map>
-        <entry key="$PROJECT_DIR$" value="4.8" />
+        <entry key="$PROJECT_DIR$" value="4.8.1" />
       </map>
     </option>
     <option name="availableProjects">
@@ -631,7 +650,7 @@
         <entry key="$USER_HOME$/.gradle/gradle.properties" value="1645988956" />
         <entry key="$PROJECT_DIR$/../JavaSudokuResolver" value="1465554021033" />
         <entry key="$PROJECT_DIR$/../scorer-tdd" value="2946722766700" />
-        <entry key="$PROJECT_DIR$" value="7587434233000" />
+        <entry key="$PROJECT_DIR$" value="7589365504000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="12089644" />
         <entry key="$PROJECT_DIR$/gry.sample.scorer2/build.gradle" value="1229662640" />
@@ -674,83 +693,83 @@
               <option name="name" value="scorer2" />
               <option name="projectBuildClasspath">
                 <list>
+                  <option value="/usr/lib/gradle/default/lib/gradle-docs-4.8.1.jar" />
                   <option value="/usr/lib/gradle/default/lib/ant-launcher-1.9.11.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-build-option-4.8.jar" />
                   <option value="/usr/lib/gradle/default/lib/gradle-kotlin-dsl-tooling-builders-0.17.5.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-tooling-api-4.8.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-logging-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-launcher-4.8.1.jar" />
                   <option value="/usr/lib/gradle/default/lib/gradle-kotlin-dsl-tooling-models-0.17.5.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-model-groovy-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-docs-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-base-services-groovy-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-build-cache-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-runtime-api-info-4.8.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-messaging-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-core-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-wrapper-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-tooling-api-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-persistent-cache-4.8.1.jar" />
                   <option value="/usr/lib/gradle/default/lib/ant-1.9.11.jar" />
                   <option value="/usr/lib/gradle/default/lib/gradle-kotlin-dsl-provider-plugins-0.17.5.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-wrapper-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-core-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-logging-4.8.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-base-services-groovy-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-model-core-4.8.1.jar" />
                   <option value="/usr/lib/gradle/default/lib/groovy-all-2.4.12.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-resources-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-cli-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-native-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-base-services-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-installation-beacon-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-launcher-4.8.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-base-services-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-core-api-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-installation-beacon-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-resources-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-runtime-api-info-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-model-groovy-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-cli-4.8.1.jar" />
                   <option value="/usr/lib/gradle/default/lib/gradle-kotlin-dsl-0.17.5.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-messaging-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-process-services-4.8.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-build-option-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-native-4.8.1.jar" />
                   <option value="/usr/lib/gradle/default/lib/gradle-kotlin-dsl-provider-spi-0.17.5.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-core-api-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-model-core-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-jvm-services-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/gradle-persistent-cache-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-testing-junit-platform-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-workers-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-reporting-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-testing-native-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-test-kit-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-testing-jvm-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-scala-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-resources-s3-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-platform-jvm-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-tooling-api-builders-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-plugin-use-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-version-control-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-resources-sftp-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-resources-gcs-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-groovy-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-java-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-dependency-management-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ivy-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ide-native-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-resources-http-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-composite-builds-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-platform-base-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ide-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-platform-play-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-osgi-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-testing-base-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-platform-native-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-maven-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-jvm-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-signing-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-publish-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-antlr-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-announce-4.8.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-jvm-services-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-process-services-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/gradle-build-cache-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-testing-native-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-reporting-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-composite-builds-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-platform-play-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-version-control-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-plugin-use-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-signing-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-native-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-publish-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-testing-jvm-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-resources-s3-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-scala-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-platform-base-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-testing-junit-platform-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-resources-http-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-resources-gcs-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-antlr-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ivy-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-plugins-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-scala-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-javascript-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-groovy-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-tooling-api-builders-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-workers-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-platform-jvm-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-maven-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-build-comparison-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-testing-base-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-platform-native-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-jvm-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ear-4.8.1.jar" />
                   <option value="/usr/lib/gradle/default/lib/plugins/ivy-2.2.0.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-build-cache-http-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-plugins-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-jacoco-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-build-init-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-build-comparison-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-plugin-development-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ear-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-native-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-javascript-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-code-quality-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ide-play-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-scala-4.8.jar" />
-                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-diagnostics-4.8.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-language-java-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-plugin-development-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ide-native-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-dependency-management-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-diagnostics-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-resources-sftp-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-jacoco-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-build-cache-http-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ide-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-test-kit-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-ide-play-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-build-init-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-announce-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-code-quality-4.8.1.jar" />
+                  <option value="/usr/lib/gradle/default/lib/plugins/gradle-osgi-4.8.1.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -813,9 +832,9 @@
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/ScoreUnit.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Game.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Tiebreak.java" />
-        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/MatchConfiguration.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/webapp/ScoreRestController.java" />
+        <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html" />
         <option value="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js" />
       </list>
@@ -856,7 +875,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -864,12 +883,23 @@
               <item name="scorer2" type="b2602c69:ProjectViewProjectNode" />
               <item name="scorer2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="scorer2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scorer2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scorer2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scorer2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1107,7 +1137,10 @@
       <workItem from="1529748141168" duration="60479000" />
       <workItem from="1530278097446" duration="14601000" />
       <workItem from="1530643189709" duration="24880000" />
-      <workItem from="1531113431641" duration="19017000" />
+      <workItem from="1531113431641" duration="29033000" />
+      <workItem from="1531476849806" duration="1527000" />
+      <workItem from="1531679376681" duration="11000" />
+      <workItem from="1531679412780" duration="6399000" />
     </task>
     <task id="LOCAL-00001" summary="Init status">
       <created>1527365527362</created>
@@ -1228,7 +1261,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531287980482</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="disable score buttons on game over.">
+      <created>1531324103618</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1531324103618</updated>
+    </task>
+    <task id="LOCAL-00019" summary="clear game scores if game is over">
+      <created>1531325693934</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1531325693934</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1264,7 +1311,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230703000" />
+    <option name="totallyTimeSpent" value="248656000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1280,40 +1327,40 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.34508547" side_tool="true" visible="true" weight="0.32929516" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32959402" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.34775642" side_tool="true" visible="true" weight="0.32929516" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32959402" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.3908046" side_tool="true" visible="true" weight="0.258547" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49946582" weight="0.32929516" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Structure" order="1" sideWeight="0.3957307" side_tool="true" visible="true" weight="0.2681624" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48397437" weight="0.39977974" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4823718" weight="0.39977974" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946582" weight="0.32929516" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49305555" weight="0.32929516" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32929516" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946582" weight="0.32929516" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.65491456" visible="true" weight="0.32929516" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6522436" visible="true" weight="0.32929516" />
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49946582" weight="0.32929516" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32929516" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6091954" visible="true" weight="0.258547" />
-      <window_info anchor="right" id="Bean Validation" order="4" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.60426927" visible="true" weight="0.2681624" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="3" side_tool="true" />
-      <window_info anchor="right" id="Gradle" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Gradle" order="11" weight="0.32959402" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="2" sideWeight="0.50246304" side_tool="true" weight="0.2596154" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32929516" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49786323" weight="0.32929516" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32959402" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32959402" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Build" order="7" weight="0.32929516" />
@@ -1369,14 +1416,16 @@
     <MESSAGE value="bug fixing" />
     <MESSAGE value="support matchMode and tiebreakMode in front end" />
     <MESSAGE value="support Match setup, reset and new match functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="support Match setup, reset and new match functionality" />
+    <MESSAGE value="disable score buttons on game over." />
+    <MESSAGE value="clear game scores if game is over" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear game scores if game is over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="62" />
+      <option name="time" value="65" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1440,13 +1489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2657#2658#0" expanded="true" />
-            <element signature="e#2732#2733#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1505,10 +1547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <element signature="e#148#149#0" expanded="true" />
-            <element signature="e#178#179#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1537,11 +1575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="130" column="45" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1688,9 +1721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1705,13 +1735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2156#2157#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2657#2658#0" expanded="true" />
-            <element signature="e#2732#2733#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1749,14 +1772,14 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="14166">
           <caret line="843" selection-start-line="843" selection-end-line="843" />
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/java.base/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="58122">
           <caret line="3321" selection-start-line="3321" selection-end-line="3321" />
         </state>
       </provider>
@@ -1775,10 +1798,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="15182" column="4" selection-start-line="15182" selection-start-column="4" selection-end-line="15182" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/webapp/ScoreRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2070#2071#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="1332">
+          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1360#1361#0" expanded="true" />
@@ -1793,41 +1834,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="15182" column="4" selection-start-line="15182" selection-start-column="4" selection-end-line="15182" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="104" column="66" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="66" />
+        <state relative-caret-position="307">
+          <caret line="65" column="80" selection-start-line="65" selection-start-column="80" selection-end-line="65" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/webapp/ScoreRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1971#1972#0" expanded="true" />
-            <element signature="e#2027#2028#0" expanded="true" />
-            <element signature="e#2217#2218#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="105" column="25" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
+        <state relative-caret-position="240">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
         </state>
       </provider>
     </entry>
