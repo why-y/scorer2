@@ -14,6 +14,21 @@ function majorReset() {
     console.log("majorReset()");
     hideScoreBoard();
     resetMatchSetup();
+    activateKeyListener();
+}
+
+function activateKeyListener() {
+    $(document).keypress(function (event) {
+        var key = event.key.toUpperCase();
+        console.log("keypress(e):", key);
+        if(matchIsRunning() && (key=='A' || key=='B')) {
+            score(key);
+        }
+    });
+}
+
+function matchIsRunning() {
+    return $("#score-board").is(':visible');
 }
 
 function startNewMatch() {
@@ -220,4 +235,3 @@ function hideScoreBoard() {
 function hideMatchSetupPanel() {
     $("#match-setup").hide();
 }
-
