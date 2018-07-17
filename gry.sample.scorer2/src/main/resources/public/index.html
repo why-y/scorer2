@@ -62,24 +62,38 @@
                 <div id="status-set5" class="col"></div>
                 <div id="status-game" class="col-2"></div>
             </div>
-            <div class="row text-xl-center bg-danger mr-2 mt-4 mb-1 ml-1 p-4" id="match-status-bar">
+            <div class="row text-xl-center bg-info mr-2 mt-4 mb-1 ml-1 p-4" id="match-status-bar">
                 <div class="col" id="match-status-text" style="font-size: 1.5rem"></div>
             </div>
         </div>
 
-        <div class="container jumbotron" id="match-setup">
-            <h1>Setup Match</h1>
-            <p>
-                <label class="font-weight-bold text-sm-left mr-3">Player A</label>
-                <input type="text" id="player-a">
-            </p>
-            <p>
-                <label class="font-weight-bold text-sm-left mr-3">Player B</label>
-                <input type="text" id="player-b">
-            </p>
-            <p>
-                <label class="font-weight-bold text-sm-left mr-3">Mode</label>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <div class="jumbotron container" id="match-setup">
+            <div class="row text-left m-2">
+                <div class="col">
+                    <h1>Setup Match</h1>
+                </div>
+            </div>
+            <div class="row text-left m-2">
+                <div class="col-2 text-lg-right">
+                    <label class="font-weight-bold text-sm-left mr-3">Player A</label>
+                </div>
+                <div class="col">
+                    <input type="text" id="player-a">
+                </div>
+            </div>
+            <div class="row text-left m-2">
+                <div class="col-2 text-lg-right">
+                    <label class="font-weight-bold text-sm-left mr-3">Player B</label>
+                </div>
+                <div class="col">
+                    <input type="text" id="player-b">
+                </div>
+            </div>
+            <div class="row text-left m-2">
+                <div class="col-2 text-lg-right">
+                    <label class="font-weight-bold text-sm-left mr-3">Mode</label>
+                </div>
+                <div class="col btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn btn-outline-secondary active">
                         <input type="radio" name="match-mode" value="best-of-3" autocomplete="off" checked> Best Of 3
                     </label>
@@ -87,25 +101,29 @@
                         <input type="radio" name="match-mode" value="best-of-5" autocomplete="off"> Best Of 5
                     </label>
                 </div>
-            </p>
-            <p>
-                <label class="font-weight-bold text-sm-left mr-3">Tiebreaks</label>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            </div>
+            <div class="row text-left m-2">
+                <div class="col-2 text-lg-right">
+                    <label class="font-weight-bold text-sm-left mr-3">Tiebreaks</label>
+                </div>
+                <div class="col btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn btn-outline-secondary active">
-                        <input type="radio" name="tiebreak-mode" value="in-all-sets" autocomplete="off"> In All Sets
+                        <input type="radio" name="tiebreak-mode" value="in-all-sets" autocomplete="off" checked> In All Sets
                     </label>
                     <label class="btn btn btn-outline-secondary">
                         <input type="radio" name="tiebreak-mode" value="in-no-set" autocomplete="off"> In No Sets
                     </label>
                     <label class="btn btn btn-outline-secondary">
-                        <input type="radio" name="tiebreak-mode" value="all-but-last-set" autocomplete="off" checked> In All But Last Set
+                        <input type="radio" name="tiebreak-mode" value="all-but-last-set" autocomplete="off"> In All But Last Set
                     </label>
                 </div>
-            </p>
-                <button class="btn-primary btn-lg" onclick="startMatch()">Start</button>
-            <p>
-
-            </p>
+            </div>
+            <div class="row m-2">
+                <div class="col-2"></div>
+                <div class="col mt-4">
+                    <button class="btn-primary btn-lg w-50" onclick="startMatch()">Start</button>
+                </div>
+            </div>
         </div>
 
         <div class="container jumbotron" id="terminate-bar">

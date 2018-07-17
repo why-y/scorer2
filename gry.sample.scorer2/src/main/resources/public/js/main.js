@@ -82,9 +82,9 @@ function showCurrentScoreUnit(currentScoreUnit) {
 function showTiebreakScore(set, setNo) {
     var lastScoringUnit = getLastScoringUnit(set);
     var statusCell = $("#status-set"+ setNo);
-    statusCell.innerHTML = isTiebreak(lastScoringUnit) ?
+    statusCell.text(isTiebreak(lastScoringUnit) ?
         "(" +lastScoringUnit.scoreA + ":" + lastScoringUnit.scoreB + ")":
-        "";
+        "");
     console.log("showTiebreak()", statusCell);
     statusCell.attr("class", "col bg-success border");
 }
@@ -94,13 +94,14 @@ function resetScoreBoard() {
     setNumbers.forEach(function(setNo) {
         $("#set" + setNo + "-score-a").text("");
         $("#set" + setNo + "-score-b").text("");
+        $("#status-set"+ setNo).text("");
         $("#status-set"+ setNo).attr("class", "col");
     });
     resetGameScore();
     resetPlayerStatus();
     resetMatchStatus();
     $("#status-game").attr("class", "col-2");
-    enableScoreButtons();
+    resetScoreButtons();
 }
 
 function resetGameScore() {
@@ -136,8 +137,8 @@ function getLastScoringUnit(set) {
 }
 
 function setPlayerNames(playerA, playerB) {
-    $("#score-btn-a").text(playerA);
-    $("#score-btn-b").text(playerB);
+    $("#score-btn-a").text(playerA=="" ? "Player A" : playerA);
+    $("#score-btn-b").text(playerB=="" ? "Player B" : playerB);
 }
 
 function getMatchMode() {
@@ -158,12 +159,14 @@ function showMatchOver(matchData) {
 
 function showWinner(winner) {
     if(winner == "A") {
-        $("#player-a-status").text("Winner")
-        $("#player-b-status").text("")
+        $("#score-btn-b").attr("class", "btn-lg btn-warning w-100");
+        $("#player-a-status").text("W")
+        $("#player-b-status").text("L")
     }
     else {
-        $("#player-a-status").text("")
-        $("#player-b-status").text("Won")
+        $("#score-btn-a").attr("class", "btn-lg btn-warning w-100");
+        $("#player-a-status").text("L")
+        $("#player-b-status").text("W")
     }
     var winnerName = getNameOfPlayer(winner);
     setStatusText("Game, Set and Match: " + winnerName);
@@ -179,9 +182,11 @@ function disableScoreButtons() {
     $("#score-btn-b").prop('disabled', true);
 }
 
-function enableScoreButtons() {
+function resetScoreButtons() {
     $("#score-btn-a").prop('disabled', false);
     $("#score-btn-b").prop('disabled', false);
+    $("#score-btn-a").attr("class", "btn-lg btn-info w-100");
+    $("#score-btn-b").attr("class", "btn-lg btn-info w-100");
 }
 
 function getNameOfPlayer(aOrB) {

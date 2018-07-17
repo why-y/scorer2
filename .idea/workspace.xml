@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7a6f1faa-3790-4618-bb71-b92fc4d02538" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/java/ch/sample/scorer2/Match.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js" afterDir="false" />
     </list>
@@ -61,8 +60,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="65" column="80" selection-start-line="65" selection-start-column="80" selection-end-line="65" selection-end-column="80" />
+            <state relative-caret-position="432">
+              <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -75,8 +74,17 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="200" selection-start-line="200" selection-end-line="200" />
+            <state relative-caret-position="144">
+              <caret line="161" selection-start-line="161" selection-end-line="161" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -187,12 +195,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getMatchSetup</find>
-      <find>setPlayerNames</find>
-      <find>startMatch</find>
-      <find>clearSetup</find>
-      <find>setAttribute</find>
-      <find>score-btn</find>
       <find>showMatchSetupPanel</find>
       <find>current-game-score-b</find>
       <find>resetScoreBoard</find>
@@ -216,6 +218,12 @@
       <find>status-bar</find>
       <find>setStatusText</find>
       <find>font</find>
+      <find>html</find>
+      <find>setAttribute</find>
+      <find>Attr</find>
+      <find>enable</find>
+      <find>resetMatchStatus</find>
+      <find>player-b-status</find>
       <find>font-size</find>
     </findStrings>
     <replaceStrings>
@@ -1140,7 +1148,7 @@
       <workItem from="1531113431641" duration="29033000" />
       <workItem from="1531476849806" duration="1527000" />
       <workItem from="1531679376681" duration="11000" />
-      <workItem from="1531679412780" duration="6399000" />
+      <workItem from="1531679412780" duration="11087000" />
     </task>
     <task id="LOCAL-00001" summary="Init status">
       <created>1527365527362</created>
@@ -1275,7 +1283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531325693934</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="use jquery cohorently">
+      <created>1531757505077</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1531757505078</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1311,7 +1326,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248656000" />
+    <option name="totallyTimeSpent" value="253344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1418,7 +1433,8 @@
     <MESSAGE value="support Match setup, reset and new match functionality" />
     <MESSAGE value="disable score buttons on game over." />
     <MESSAGE value="clear game scores if game is over" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear game scores if game is over" />
+    <MESSAGE value="use jquery cohorently" />
+    <option name="LAST_COMMIT_MESSAGE" value="use jquery cohorently" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1689,13 +1705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -1834,10 +1843,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/test/java/ch/sample/scorer2/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="65" column="80" selection-start-line="65" selection-start-column="80" selection-end-line="65" selection-end-column="80" />
+        <state relative-caret-position="432">
+          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1848,8 +1864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gry.sample.scorer2/src/main/resources/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        <state relative-caret-position="144">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
         </state>
       </provider>
     </entry>
