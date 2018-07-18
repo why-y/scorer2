@@ -11,6 +11,26 @@
         <script src="js/jquery/jquery-3.3.1.slim.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <style>
+            @font-face {
+                font-family:"Segment14";
+                src: url("fonts/Segment14/Segment14.woff") format("woff"),
+                url("fonts/Segment14/Segment14.ttf") format("truetype"),
+                url("fonts/Segment14/Segment14.svg#Segment14") format("svg");
+            }
+            .seg-14 {
+                font-family: Segment14;
+                font-size: 2rem;
+                color: antiquewhite;
+                font-weight: bold;
+            }
+            .seg-14-sm {
+                font-family: Segment14;
+                font-size: 1rem;
+                color: antiquewhite;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body class="bg-light" onload="majorReset()">
         <div class="container jumbotron">
@@ -26,31 +46,31 @@
                 <div class="col">Set 3</div>
                 <div class="col">Set 4</div>
                 <div class="col">Set 5</div>
-                <div id="scoreUnitLabel" class="col-2">Game</div>
+                <div id="scoreUnitLabel" class="col-3">Game</div>
             </div>
-            <div class="row bg-success mr-2" style="font-size: 2rem">
+            <div class="row bg-success mr-2" style="font-size: 2rem;">
                 <div class="col-3 text-left bg-warning">
                     <button id="score-btn-a" class="btn-lg btn-info w-100" onclick="score('A');">Player A</button>
                 </div>
                 <div id="player-a-status" class="col-1 bg-warning text-left"></div>
-                <div id="set1-score-a" class="col border"></div>
-                <div id="set2-score-a" class="col border"></div>
-                <div id="set3-score-a" class="col border"></div>
-                <div id="set4-score-a" class="col border"></div>
-                <div id="set5-score-a"  class="col border"></div>
-                <div id="current-game-score-a" class="col-2 border"></div>
+                <div id="set1-score-a" class="col border seg-14"></div>
+                <div id="set2-score-a" class="col border seg-14"></div>
+                <div id="set3-score-a" class="col border seg-14"></div>
+                <div id="set4-score-a" class="col border seg-14"></div>
+                <div id="set5-score-a"  class="col border seg-14"></div>
+                <div id="current-game-score-a" class="col-3 border seg-14"></div>
             </div>
             <div class="row bg-success mr-2" style="font-size: 2rem">
                 <div class="col-3 text-left bg-warning">
                     <button id="score-btn-b" class="btn-lg btn-info w-100" onclick="score('B');">Player B</button>
                 </div>
                 <div id="player-b-status" class="col-1 bg-warning text-left"></div>
-                <div id="set1-score-b" class="col border"></div>
-                <div id="set2-score-b" class="col border"></div>
-                <div id="set3-score-b" class="col border"></div>
-                <div id="set4-score-b" class="col border"></div>
-                <div id="set5-score-b" class="col border"></div>
-                <div id="current-game-score-b" class="col-2 border"></div>
+                <div id="set1-score-b" class="col border seg-14"></div>
+                <div id="set2-score-b" class="col border seg-14"></div>
+                <div id="set3-score-b" class="col border seg-14"></div>
+                <div id="set4-score-b" class="col border seg-14"></div>
+                <div id="set5-score-b" class="col border seg-14"></div>
+                <div id="current-game-score-b" class="col-3 border seg-14"></div>
             </div>
             <div class="row text-right bg-warning mr-2">
                 <div class="col-3"></div>
@@ -60,7 +80,7 @@
                 <div id="status-set3" class="col"></div>
                 <div id="status-set4" class="col"></div>
                 <div id="status-set5" class="col"></div>
-                <div id="status-game" class="col-2"></div>
+                <div id="status-game" class="col-3"></div>
             </div>
             <div class="row text-xl-center bg-info mr-2 mt-4 mb-1 ml-1 p-4" id="match-status-bar">
                 <div class="col" id="match-status-text" style="font-size: 1.5rem"></div>

@@ -50,16 +50,19 @@ public class Game implements ScoreUnit {
     }
 
     //////////// for JSON serializing /////////////
+    private static final String DEUCE = "DEUCE";
+    private static final String ADVANTAGE = "ADVANTAGE";
+
     public String getScoreA() {
-        if(scoreA>=40 && scoreA==scoreB) return "Deuce";
-        if(scoreA>40 && scoreA>scoreB) return "Advantage";
+        if(scoreA>=40 && scoreA==scoreB) return DEUCE;
+        if(scoreA>40 && scoreA>scoreB) return ADVANTAGE;
         if(scoreB>40) return "";
         return String.valueOf(scoreA);
     }
 
     public String getScoreB() {
-        if(scoreB>=40 && scoreA==scoreB) return "Deuce";
-        if(scoreB>40 && scoreB>scoreA) return "Advantage";
+        if(scoreB>=40 && scoreA==scoreB) return DEUCE;
+        if(scoreB>40 && scoreB>scoreA) return ADVANTAGE;
         if(scoreA>40) return "";
         return String.valueOf(scoreB);
     }

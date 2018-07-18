@@ -33,6 +33,7 @@ function matchIsRunning() {
 
 function startNewMatch() {
     location.reload();
+    $("#player-a").focus();
 }
 
 function startMatch() {
@@ -98,10 +99,10 @@ function showTiebreakScore(set, setNo) {
     var lastScoringUnit = getLastScoringUnit(set);
     var statusCell = $("#status-set"+ setNo);
     statusCell.text(isTiebreak(lastScoringUnit) ?
-        "(" +lastScoringUnit.scoreA + ":" + lastScoringUnit.scoreB + ")":
+        lastScoringUnit.scoreA + "-" + lastScoringUnit.scoreB:
         "");
     console.log("showTiebreak()", statusCell);
-    statusCell.attr("class", "col bg-success border");
+    statusCell.attr("class", "col bg-success seg-14-sm border");
 }
 
 function resetScoreBoard() {
@@ -115,7 +116,7 @@ function resetScoreBoard() {
     resetGameScore();
     resetPlayerStatus();
     resetMatchStatus();
-    $("#status-game").attr("class", "col-2");
+    $("#status-game").attr("class", "col-3");
     resetScoreButtons();
 }
 
