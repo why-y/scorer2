@@ -102,7 +102,7 @@ function showTiebreakScore(set, setNo) {
         lastScoringUnit.scoreA + "-" + lastScoringUnit.scoreB:
         "");
     console.log("showTiebreak()", statusCell);
-    statusCell.attr("class", "col bg-success seg-14-sm border");
+    statusCell.attr("class", "col bg-score-game seg-14-sm border");
 }
 
 function resetScoreBoard() {
@@ -114,8 +114,6 @@ function resetScoreBoard() {
         $("#status-set"+ setNo).attr("class", "col");
     });
     resetGameScore();
-    resetPlayerStatus();
-    resetMatchStatus();
     $("#status-game").attr("class", "col-3");
     resetScoreButtons();
 }
@@ -174,23 +172,13 @@ function showMatchOver(matchData) {
 }
 
 function showWinner(winner) {
+    $("#current-game-score-" + winner.toLowerCase()).text("WINNER");
     if(winner == "A") {
         $("#score-btn-b").attr("class", "btn-lg btn-warning w-100");
-        $("#player-a-status").text("W")
-        $("#player-b-status").text("L")
     }
     else {
         $("#score-btn-a").attr("class", "btn-lg btn-warning w-100");
-        $("#player-a-status").text("L")
-        $("#player-b-status").text("W")
     }
-    var winnerName = getNameOfPlayer(winner);
-    setStatusText("Game, Set and Match: " + winnerName);
-}
-
-function resetPlayerStatus() {
-    $("#player-a-status").text("")
-    $("#player-b-status").text("")
 }
 
 function disableScoreButtons() {
@@ -207,18 +195,6 @@ function resetScoreButtons() {
 
 function getNameOfPlayer(aOrB) {
     return (aOrB == "A") ? $("#score-btn-a").text() : $("#score-btn-b").text();
-}
-
-function setStatusText(text) {
-    console.log("setStatusText("+ text +")");
-    $("#match-status-text").text(text);
-    $("#match-status-bar").show();
-}
-
-function resetMatchStatus() {
-    console.log("resetMatchStatus()");
-    $("#match-status-text").text("");
-    $("#match-status-bar").hide();
 }
 
 function showScoreBoard() {
