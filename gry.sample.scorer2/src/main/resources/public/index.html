@@ -21,23 +21,23 @@
             .seg-14 {
                 font-family: Segment14;
                 font-size: 2rem;
-                color: antiquewhite;
+                color: gold;
                 font-weight: bold;
             }
             .seg-14-sm {
                 font-family: Segment14;
                 font-size: 1rem;
-                color: antiquewhite;
+                color: gold;
                 font-weight: bold;
             }
             .bg-score {
-                background-color: darkgreen;
+                background-color: #062;
             }
             .bg-score-game {
-                background-color: green;
+                background-color: #00802b;
             }
             .bg-score-board {
-                background-color: wheat;
+                background-color: floralwhite;
             }
         </style>
     </head>
@@ -57,26 +57,26 @@
                 <div id="scoreUnitLabel" class="col-3">Game</div>
             </div>
             <div class="row bg-score mr-2" style="font-size: 2rem;">
-                <div class="col-3 text-left bg-score-board">
+                <div class="col-3 pt-2 pb-2 text-left bg-score-board">
                     <button id="score-btn-a" class="btn-lg btn-info w-100" onclick="score('A');">Player A</button>
                 </div>
-                <div id="set1-score-a" class="col border seg-14"></div>
-                <div id="set2-score-a" class="col border seg-14"></div>
-                <div id="set3-score-a" class="col border seg-14"></div>
-                <div id="set4-score-a" class="col border seg-14"></div>
-                <div id="set5-score-a"  class="col border seg-14"></div>
-                <div id="current-game-score-a" class="col-3 bg-score-game border seg-14"></div>
+                <div id="set1-score-a" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="set2-score-a" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="set3-score-a" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="set4-score-a" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="set5-score-a"  class="col pt-2 pb-2 border seg-14"></div>
+                <div id="current-game-score-a" class="col-3 pt-2 pb-2 bg-score-game border seg-14"></div>
             </div>
             <div class="row bg-score mr-2" style="font-size: 2rem">
-                <div class="col-3 text-left bg-score-board">
+                <div class="col-3 pt-2 pb-2 text-left bg-score-board">
                     <button id="score-btn-b" class="btn-lg btn-info w-100" onclick="score('B');">Player B</button>
                 </div>
-                <div id="set1-score-b" class="col border seg-14"></div>
-                <div id="set2-score-b" class="col border seg-14"></div>
-                <div id="set3-score-b" class="col border seg-14"></div>
-                <div id="set4-score-b" class="col border seg-14"></div>
-                <div id="set5-score-b" class="col border seg-14"></div>
-                <div id="current-game-score-b" class="col-3 bg-score-game border seg-14"></div>
+                <div id="set1-score-b" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="set2-score-b" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="set3-score-b" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="set4-score-b" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="set5-score-b" class="col pt-2 pb-2 border seg-14"></div>
+                <div id="current-game-score-b" class="col-3 pt-2 pb-2 bg-score-game border seg-14"></div>
             </div>
             <div class="row text-right bg-score-board mr-2">
                 <div class="col-3"></div>
@@ -86,6 +86,12 @@
                 <div id="status-set4" class="col"></div>
                 <div id="status-set5" class="col"></div>
                 <div id="status-game" class="col-3"></div>
+            </div>
+            <div class="row text-right text-secondary mr-2 mt-2">
+                <div class="col-6 text-left">
+                    To score press on player name or use keys 'a' or 'b'
+                </div>
+                <div class="col" id="match-config-info"></div>
             </div>
         </div>
 
@@ -148,7 +154,7 @@
             </div>
         </div>
 
-        <div class="container jumbotron" id="terminate-bar">
+        <div class="container jumbotron" id="terminate-bar" hidden >
             <button class="btn btn-lg btn-secondary" onclick="startMatch()">Reset Match</button>
             <button class="btn btn-lg btn-link" onclick="startNewMatch()">New Match</button>
         </div>

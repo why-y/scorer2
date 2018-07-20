@@ -40,8 +40,8 @@ function startMatch() {
     var matchSetup = getMatchSetup();
     console.log("startMatch()", matchSetup);
     setPlayerNames(matchSetup.playerA, matchSetup.playerB);
-    console.log("matchSetup: ", matchSetup);
-    axios.post(api + 'match', matchSetup).then(function (value) {
+    showMatchConfigInfo(matchSetup);
+    axios.post(api + 'match', matchSetup).then(function() {
         resetScoreBoard();
         hideMatchSetupPanel();
         showScoreBoard();
@@ -173,12 +173,8 @@ function showMatchOver(matchData) {
 
 function showWinner(winner) {
     $("#current-game-score-" + winner.toLowerCase()).text("WINNER");
-    if(winner == "A") {
-        $("#score-btn-b").attr("class", "btn-lg btn-warning w-100");
-    }
-    else {
-        $("#score-btn-a").attr("class", "btn-lg btn-warning w-100");
-    }
+    var buttonToFade = winner == "A" ? $("#score-btn-b") : $("#score-btn-a");
+    buttonToFade.attr("class", "btn-lg btn-outline-light text-dark w-100");
 }
 
 function disableScoreButtons() {
@@ -199,16 +195,24 @@ function getNameOfPlayer(aOrB) {
 
 function showScoreBoard() {
     console.log("showScoreBoard()");
-    $("#score-board").show();
-    $("#terminate-bar").show();
+    $("#score-board").removeAttr("hidden");
+    $("#terminate-bar").removeAttr("hidden");
 }
 
 function hideScoreBoard() {
     console.log("hideScoreBoard()");
-    $("#score-board").hide();
-    $("#terminate-bar").hide();
+    $("#score-board").attr("hidden", true);
+    $("#terminate-bar").attr("hidden", true);
 }
 
 function hideMatchSetupPanel() {
     $("#match-setup").hide();
+}
+
+function showMatchConfigInfo(matchConfig) {
+    console.log("showMatchConfigInfo()", matchConfig);
+    $("#match-config-info").text("Mode: "
+        + matchConfig.matchMode.replace(/-/g, " ")
+        + " -- Tiebreaks: "
+        + matchConfig.tiebreakMode.replace(/-/g, " "));
 }
