@@ -14,7 +14,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/tennis-score/api")
 public class ScoreRestController {
 
     Match currentMatch;
