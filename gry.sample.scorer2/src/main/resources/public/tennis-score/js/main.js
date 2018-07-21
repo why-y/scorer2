@@ -30,7 +30,9 @@ function activateKeyListener() {
 }
 
 function matchIsRunning() {
-    return $("#score-board").is(':visible');
+    // match is running if score buttons are enabled
+    console.log("matchIsRunning(): ", !$("#score-btn-a").prop("disabled"));
+    return !$("#score-btn-a").prop("disabled");
 }
 
 function startNewMatch() {
