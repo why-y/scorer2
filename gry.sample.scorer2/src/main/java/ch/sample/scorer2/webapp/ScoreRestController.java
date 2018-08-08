@@ -3,9 +3,14 @@ package ch.sample.scorer2.webapp;
 import ch.sample.scorer2.Match;
 import ch.sample.scorer2.MatchConfiguration;
 import ch.sample.scorer2.Player;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 import static ch.sample.scorer2.MatchConfiguration.BestOf.FIVE;
 import static ch.sample.scorer2.MatchConfiguration.BestOf.THREE;
@@ -17,21 +22,23 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RequestMapping("/tennis-score/api")
 public class ScoreRestController {
 
-    Match currentMatch;
+    Map<String, Match> currentMatches = new HashMap<>();
 
-    @RequestMapping(value="/match", method = GET)
-    public Match getCurrentScore() {
+    @RequestMapping(value="/match/{id}", method = GET)
+    public Match getCurrentScore(@PathVariable String id) {
+        System.out.println(String.format("getCurrentScore() of match: %s", id));
+        Match currentMatch = getMatchById(id);
         return currentMatch != null ?
                 currentMatch :
                 Match.startDefaultMatch();
     }
 
     @RequestMapping(value="/match", method = POST)
-    public void startMatch(@RequestBody String requestBody) {
+    public String startMatch(@RequestBody String requestBody) {
         System.out.println(String.format("POST match -> start match -> RequestBody: %s", requestBody));
         MatchConfiguration matchConfig = isBestOfThree(requestBody) ? Match.bestOf(THREE) : Match.bestOf(FIVE);
         matchConfig = matchConfig.withTiebreaks(getTiebreakMode(requestBody));
-        currentMatch = matchConfig.start();
+        return registerMatch(matchConfig.start()).toString();
     }
 
     private MatchConfiguration.Tiebreaks getTiebreakMode(String requestBody) {
@@ -48,14 +55,25 @@ public class ScoreRestController {
         return requestBody.contains("best-of-3");
     }
 
-    @RequestMapping(value = "/match/rally", method = POST)
-    public void scoreRallyFor(@RequestBody String request) {
-        currentMatch = currentMatch.score(getPlayer(request));
+    @RequestMapping(value = "/match/{id}/rally", method = POST)
+    public void scoreRallyFor(@PathVariable String id, @RequestBody String request) {
+        System.out.println(String.format("scoreRallyFor() id: %s  request: %s", id, request));
+        currentMatches.replace(id, getMatchById(id).score(getPlayer(request)));
+    }
+
+    private Match getMatchById(String id) {
+        return currentMatches.get(id);
     }
 
     private Player getPlayer(String responseJson) {
         System.out.println("responseJson: " + responseJson);
         return responseJson.charAt(11) == 'A' ? Player.A : Player.B;
+    }
+
+    private UUID registerMatch(final Match newMatch) {
+        UUID matchId = UUID.randomUUID();
+        currentMatches.put(matchId.toString(), newMatch);
+        return matchId;
     }
 
 }

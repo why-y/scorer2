@@ -1,10 +1,12 @@
+var matchId;
+
 function getApi() {
     return $(location).attr('origin') + "/tennis-score/api/";
 }
 
 function getScore() {
     console.log("getScore()");
-    axios.get(getApi() + 'match').then(function (response) {
+    axios.get(getApi() + 'match/' + matchId).then(function (response) {
         var matchData = response.data;
         showScore(matchData);
     }).catch(function (reason) {
@@ -45,7 +47,8 @@ function startMatch() {
     console.log("startMatch()", matchSetup);
     setPlayerNames(matchSetup.playerA, matchSetup.playerB);
     showMatchConfigInfo(matchSetup);
-    axios.post(getApi() + 'match', matchSetup).then(function() {
+    axios.post(getApi() + 'match', matchSetup).then(function(id) {
+        matchId = id.data;
         resetScoreBoard();
         hideMatchSetupPanel();
         showScoreBoard();
@@ -57,7 +60,7 @@ function startMatch() {
 
 function score(player) {
     console.log('score(' + player + ')');
-    axios.post(getApi() + 'match/rally', {'Player': player}).then(function (value) {
+    axios.post(getApi() + 'match/' + matchId + '/rally', {'Player': player}).then(function (value) {
         console.log(value);
         getScore();
     }).catch(function (reason) {
