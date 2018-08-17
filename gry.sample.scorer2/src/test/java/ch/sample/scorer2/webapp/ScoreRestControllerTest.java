@@ -23,8 +23,8 @@ public class ScoreRestControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @Ignore
     @Test
+    @Ignore
     public void getHello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
