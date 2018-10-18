@@ -46,31 +46,12 @@ public class Game implements ScoreUnit {
 
     @Override
     public boolean isWonBy(Player player) {
-        return isTwoRalliesAhead(player) && (player == A ? scoreA > 40 : scoreB > 40);
+        return isTwoRalliesAhead(player) && getScoreOf(player) > 40 ;
     }
 
-    //////////// for JSON serializing /////////////
-    private static final String DEUCE = "DEUCE";
-    private static final String ADVANTAGE = "ADVANTAGE";
-
-    public String getScoreA() {
-        if(scoreA>=40 && scoreA==scoreB) return DEUCE;
-        if(scoreA>40 && scoreA>scoreB) return ADVANTAGE;
-        if(scoreB>40) return "";
-        return String.valueOf(scoreA);
+    private int getScoreOf(Player player) {
+        return player == A ? scoreA : scoreB;
     }
-
-    public String getScoreB() {
-        if(scoreB>=40 && scoreA==scoreB) return DEUCE;
-        if(scoreB>40 && scoreB>scoreA) return ADVANTAGE;
-        if(scoreA>40) return "";
-        return String.valueOf(scoreB);
-    }
-
-    public boolean isTiebreak() {
-        return false;
-    }
-    ///////////////////////////////////////////////
 
     private int getNextScore(final int currentScore) {
         return currentScore < 30 ? currentScore + 15 : currentScore + 10;
@@ -100,5 +81,29 @@ public class Game implements ScoreUnit {
             throw new AlreadyTerminatedException("must not score on a terminated game!");
         }
     }
+
+
+    //////////// for JSON serializing /////////////
+    private static final String DEUCE = "DEUCE";
+    private static final String ADVANTAGE = "ADVANTAGE";
+
+    public String getScoreA() {
+        if(scoreA>=40 && scoreA==scoreB) return DEUCE;
+        if(scoreA>40 && scoreA>scoreB) return ADVANTAGE;
+        if(scoreB>40) return "";
+        return String.valueOf(scoreA);
+    }
+
+    public String getScoreB() {
+        if(scoreB>=40 && scoreA==scoreB) return DEUCE;
+        if(scoreB>40 && scoreB>scoreA) return ADVANTAGE;
+        if(scoreA>40) return "";
+        return String.valueOf(scoreB);
+    }
+
+    public boolean isTiebreak() {
+        return false;
+    }
+    ///////////////////////////////////////////////
 
 }
